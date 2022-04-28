@@ -1621,15 +1621,13 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="info-box heightFull">
-                                            <img src="{{ asset('img/logos/selectel.png') }}img/icons/zoom.svg"
-                                                alt="">
+                                            <img src="{{ asset('img/icons/zoom.svg') }}" alt="">
                                             <h3>Забронировать<br> Zoom-звонок</h3>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="info-box heightFull">
-                                            <img src="{{ asset('img/logos/selectel.png') }}img/icons/telegram.svg"
-                                                alt="">
+                                            <img src="{{ asset('img/icons/telegram.svg') }}" alt="">
                                             <h3>Telegram</h3>
                                             <a href="https://t.me/itvisa" target="_blank"><span
                                                     class="text-muted">@itvisa</span></a>
@@ -1681,8 +1679,7 @@
                                                 <input type="file">
                                                 <span class="btn btn-success" type="button">
                                                     Прикрепить документ
-                                                    <img src="{{ asset('img/logos/selectel.png') }}img/icons/direct-send.svg"
-                                                        alt="">
+                                                    <img src="{{ asset('img/icons/direct-send.svg') }}" alt="">
                                                 </span>
                                             </label>
                                         </div>
@@ -1695,8 +1692,7 @@
                                         <div class="mb-3">
                                             <a href="#" class="btn btn-success">
                                                 Скачать шаблон
-                                                <img src="{{ asset('img/logos/selectel.png') }}img/icons/direct-inbox.svg"
-                                                    alt="">
+                                                <img src="{{ asset('img/icons/direct-inbox.svg') }}" alt="">
                                             </a>
                                         </div>
                                         <div class="fileSelect">
@@ -1704,8 +1700,7 @@
                                                 <input type="file">
                                                 <span class="btn btn-success" type="button">
                                                     Прикрепить документ
-                                                    <img src="{{ asset('img/logos/selectel.png') }}img/icons/direct-send.svg"
-                                                        alt="">
+                                                    <img src="{{ asset('img/icons/direct-send.svg') }}" alt="">
                                                 </span>
                                             </label>
                                         </div>
@@ -1737,15 +1732,13 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="info-box heightFull">
-                                            <img src="{{ asset('img/logos/selectel.png') }}img/icons/zoom.svg"
-                                                alt="">
+                                            <img src="{{ asset('img/icons/zoom.svg') }}" alt="">
                                             <h3>Забронировать<br> Zoom-звонок</h3>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="info-box heightFull">
-                                            <img src="{{ asset('img/logos/selectel.png') }}img/icons/telegram.svg"
-                                                alt="">
+                                            <img src="{{ asset('img/icons/telegram.svg') }}" alt="">
                                             <h3>Telegram</h3>
                                             <a href="https://t.me/itvisa" target="_blank"><span
                                                     class="text-muted">@itvisa</span></a>
@@ -1838,15 +1831,13 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="info-box heightFull">
-                                            <img src="{{ asset('img/logos/selectel.png') }}img/icons/zoom.svg"
-                                                alt="">
+                                            <img src="{{ asset('img/icons/zoom.svg') }}" alt="">
                                             <h3>Забронировать<br> Zoom-звонок</h3>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="info-box heightFull">
-                                            <img src="{{ asset('img/logos/selectel.png') }}img/icons/telegram.svg"
-                                                alt="">
+                                            <img src="{{ asset('img/icons/telegram.svg') }}" alt="">
                                             <h3>Telegram</h3>
                                             <a href="https://t.me/itvisa" target="_blank"><span
                                                     class="text-muted">@itvisa</span></a>
@@ -1866,15 +1857,15 @@
 
 
     <!-- Vendor JS Files -->
-    <script src="{{ asset('img/logos/selectel.png') }}vendor/purecounter/purecounter.js"></script>
-    <script src="{{ asset('img/logos/selectel.png') }}vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('img/logos/selectel.png') }}vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="{{ asset('img/logos/selectel.png') }}vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="{{ asset('img/logos/selectel.png') }}vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="{{ asset('img/logos/selectel.png') }}vendor/php-email-form/validate.js"></script>
+    <script src="{{ asset('vendor/purecounter/purecounter.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
 
     <!-- Template Main JS File -->
-    <script src="{{ asset('img/logos/selectel.png') }}js/main.js"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m, e, t, r, i, k, a) {
