@@ -10,4 +10,9 @@ class CompanyService extends BaseService
     {
         $this->repo = $repo;
     }
+
+    public function index()
+    {
+        return $this->repo->index();
+    }
 }

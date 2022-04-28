@@ -10,4 +10,9 @@ class CompanyRepository extends BaseRepository
     {
         $this->entity  = $company;
     }
+
+    public function index()
+    {
+        return $this->entity;
+    }
 }
