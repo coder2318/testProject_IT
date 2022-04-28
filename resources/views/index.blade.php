@@ -263,8 +263,7 @@
                                 </li>
                             </ul>
 
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkikc9X_OLqMGGsqK6PTmEWo23A3gP5Ute3QsxvtgfUFZUdQ/viewform"
-                                target="_blank" class="btn btn-success">Подать заявку</a>
+                            <a href="{{route('company.create')}}" class="btn btn-success">Подать заявку</a>
 
                         </div>
                     </div>
@@ -307,8 +306,7 @@
                                 </li>
                             </ul>
 
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtrkniUrvAZmcyyg2AL0O3fP-pYb5iOcX75Sau9bf57wRx2A/viewform"
-                                target="_blank" class="btn btn-success">Подать заявку</a>
+                            <a href="{{route('specialist-relocation.create')}}" class="btn btn-success">Подать заявку</a>
 
                         </div>
                     </div>

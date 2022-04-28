@@ -21,3 +21,8 @@ Route::group(['prefix' => 'company'], function (){
    Route::get('create', [\App\Http\Controllers\CompanyController::class, 'create'])->name('company.create');
    Route::post('store', [\App\Http\Controllers\CompanyController::class, 'store'])->name('company.store');
 });
+
+Route::group(['prefix' => 'specialist-relocation'], function (){
+    Route::get('create', [\App\Http\Controllers\SpecialistRelocationController::class, 'create'])->name('specialist-relocation.create');
+    Route::post('store', [\App\Http\Controllers\SpecialistRelocationController::class, 'store'])->name('specialist-relocation.store');
+});

@@ -39,7 +39,6 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('fonts/stylesheet.css') }}" rel="stylesheet">
-
     <!-- =======================================================
   * Template Name: Baker - v4.7.0
 * Template URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
@@ -54,7 +53,7 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-        <h1 class="logo"><a href="index.html">
+        <h1 class="logo"><a href="{{route('home')}}">
                 <img src="{{ asset('img/logo.svg') }}" alt="">
             </a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
