@@ -16,7 +16,11 @@ class CompanyController extends Controller
     {
         $this->service = $service;
     }
+    public function dashboard()
+    {
+        return view('admin.layouts.app');
 
+    }
     public function create()
     {
         return view('company.create');

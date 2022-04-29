@@ -7,6 +7,13 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a href="{{ route('admin.index') }}" class="nav-link">Home</a>
         </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{ route('admin.logout') }}" class="nav-link"
+                onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </li>
     </ul>
 
     <!-- Right navbar links -->

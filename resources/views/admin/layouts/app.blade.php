@@ -39,6 +39,7 @@
                 @yield('content')
             </section>
             <!-- /.content -->
+
         </div>
         @include('admin.partials.footer')
         <!-- /.content-wrapper -->

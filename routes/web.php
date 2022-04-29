@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,12 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index'] )->name('home');
-Route::get('/admin', [\App\Http\Controllers\HomeController::class, 'admin'])->name('admin.index');
 
-Route::group(['prefix' => 'company'], function (){
+
+Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'admin'])->middleware('auth')->name('admin.index');
+
+
+Route::group(['prefix' => 'company', 'middleware' => 'auth'], function (){
    Route::get('/', [\App\Http\Controllers\CompanyController::class, 'index'])->name('company.index');
    Route::get('create', [\App\Http\Controllers\CompanyController::class, 'create'])->name('company.create');
    Route::post('store', [\App\Http\Controllers\CompanyController::class, 'store'])->name('company.store');
