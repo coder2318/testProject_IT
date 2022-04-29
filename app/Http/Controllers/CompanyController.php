@@ -26,7 +26,7 @@ class CompanyController extends Controller
     {
         $params = $request->validated();
         $this->service->create($params);
-        return redirect()->route('home');
+        return redirect()->route('thanks');
     }
 
     public function index()

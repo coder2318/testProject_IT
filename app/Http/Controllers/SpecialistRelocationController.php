@@ -39,8 +39,8 @@ class SpecialistRelocationController extends Controller
         $params = $request->validated();
         $params = $this->fileUpload($params, $request, 'specialist-relocation');
         $this->service->create($params);
-        return redirect()->route('home');
+        return redirect()->route('thanks');
     }
 
-    
+
 }

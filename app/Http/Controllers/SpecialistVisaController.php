@@ -38,6 +38,6 @@ class SpecialistVisaController extends Controller
         $params = $request->validated();
         $params = $this->fileUpload($params, $request, 'specialist-visa');
         $this->service->create($params);
-        return redirect()->route('home');
+        return redirect()->route('thanks');
     }
 }

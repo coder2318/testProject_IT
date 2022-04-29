@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 //});
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index'] )->name('home');
 Route::get('/admin', [\App\Http\Controllers\HomeController::class, 'admin'])->name('admin.index');
+Route::get('/thanks', [\App\Http\Controllers\HomeController::class, 'thanks'])->name('admin.thanks');
 
 Route::group(['prefix' => 'company'], function (){
    Route::get('/', [\App\Http\Controllers\CompanyController::class, 'index'])->name('company.index');
