@@ -8,33 +8,29 @@
                             <thead>
                                 <tr>
                                     <th>Имя</th>
-                                    <th>Название компании</th>
-                                    <th>Деятельность</th>
+                                    <th>Страна</th>
                                     <th>Телефон номер</th>
                                     <th>Эмайл</th>
                                     <th>Действие</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($companies as $company)
-                                    <tr id="Id{{ $company->id }}">
-                                        <td>{{ $company->person_fio }}</td>
+                                @foreach ($founders as $founder)
+                                    <tr id="Id{{ $founder->id }}">
+                                        <td>{{ $founder->fio }}</td>
                                         <td>
-                                            {{ $company->name }}
+                                            {{ $founder->country }}
                                         </td>
                                         <td>
-                                            {{ $company->activity }}
+                                            {{ $founder->phone }}
                                         </td>
                                         <td>
-                                            {{ $company->phone }}
-                                        </td>
-                                        <td>
-                                            {{ $company->email }}
+                                            {{ $founder->email }}
                                         </td>
                                         <td>
                                             <div class="inline-block ml-4">
                                                 <span>
-                                                    <a href="{{ route('company.show', $company->id) }}"
+                                                    <a href="{{ route('founder.show', $founder->id) }}"
                                                         class="text-primary"><i class="fas fa-eye"
                                                             aria-hidden="true"></i></a>
                                                 </span>

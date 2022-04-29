@@ -13,6 +13,6 @@ class CompanyRepository extends BaseRepository
 
     public function index()
     {
-        return $this->entity;
+        return $this->entity->get();
     }
 }

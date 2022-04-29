@@ -10,7 +10,7 @@
                     <div class="mb-5">
                         <h1>IT-Visa в Узбекистане</h1>
                         <!-- <h2>Рабочая виза сроком до 3-х лет<br>
-              для IT-компаний и IT-специалистов</h2> -->
+                                                              для IT-компаний и IT-специалистов</h2> -->
                         <h2>Программа релокации</h2>
                     </div>
                     <a href="#privileges" class="btn btn-outline-white scrollto me-4">IT Компаниям</a>
@@ -111,8 +111,8 @@
                                     <img src="{{ asset('img/icons/card-pos.svg') }}" alt="">
                                 </div>
                                 <div class="shadow-box-text mb-4">Инвесторы</div>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-4zCHjgKTo19oLgo4A1n-TGlfj8bGPR3-nYQxM38T4B76uA/viewform"
-                                    target="_blank" class="btn btn-success">Подать заявку</a>
+                                <a href="{{ route('investor.create') }}" class="btn btn-success">Подать
+                                    заявку</a>
                             </div>
                         </div>
                         <div class="col-md-4 withSmBorder">
@@ -121,8 +121,8 @@
                                     <img src="{{ asset('img/icons/tag-user.svg') }}" alt="">
                                 </div>
                                 <div class="shadow-box-text mb-4">Учредители<br> резидентов IT Park</div>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzucv-31NR_SYI6gfpUKRN29PYodlwfXPkXnUTiW8lTcZfEw/viewform"
-                                    target="_blank" class="btn btn-success">Подать заявку</a>
+                                <a href="{{ route('founder.create') }}" class="btn btn-success">Подать
+                                    заявку</a>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -131,8 +131,7 @@
                                     <img src="{{ asset('img/icons/code.svg') }}" alt="">
                                 </div>
                                 <div class="shadow-box-text mb-4">IT-специалисты</div>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTidsMnrzWhoVOA9t5EihcboOd4qyKKoUWUiRyOuZkhiJ6yQ/viewform"
-                                    target="_blank" class="btn btn-success">Подать заявку</a>
+                                <a href="{{ route('specialist-visa.create') }}" class="btn btn-success">Подать заявку</a>
                             </div>
                         </div>
                     </div>
@@ -263,7 +262,7 @@
                                 </li>
                             </ul>
 
-                            <a href="{{route('company.create')}}" class="btn btn-success">Подать заявку</a>
+                            <a href="{{ route('company.create') }}" class="btn btn-success">Подать заявку</a>
 
                         </div>
                     </div>
@@ -306,7 +305,8 @@
                                 </li>
                             </ul>
 
-                            <a href="{{route('specialist-relocation.create')}}" class="btn btn-success">Подать заявку</a>
+                            <a href="{{ route('specialist-relocation.create') }}" class="btn btn-success">Подать
+                                заявку</a>
 
                         </div>
                     </div>
@@ -355,7 +355,6 @@
                 </div>
 
                 <div class="text-center mt-5">
-                    {{-- Must fix this --}}
                     <a href="{{ asset('files/guide_Uzbekistan.pdf') }}" class="btn btn-success" target="_blank">
                         Скачать буклет об Узбекистане
                         <img class="ms-3" src="{{ asset('img/icons/document-download.svg') }}" alt="">
@@ -375,8 +374,7 @@
                 <div class="row mb-5">
                     <div class="col-md-4">
                         <div class="card card-sm card-hover">
-                            <div class="card-image"
-                                style="background-image: url('{{ asset('img/uploaded 1.png') }}')">
+                            <div class="card-image" style="background-image: url('{{ asset('img/uploaded 1.png') }}')">
                             </div>
                             <div class="card-body text-center">
                                 <div class="card-title">Доступные цены</div>
@@ -423,8 +421,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card card-sm card-hover">
-                            <div class="card-image"
-                                style="background-image: url('{{ asset('img/scale_1200.webp') }}')">
+                            <div class="card-image" style="background-image: url('{{ asset('img/scale_1200.webp') }}')">
                             </div>
                             <div class="card-body text-center">
                                 <div class="card-title">Богатая национальная кухня</div>
@@ -814,8 +811,8 @@
                                         <li>IT Park самостоятельно уведомляет налоговые органы о заключении с
                                             резидентами договора «Виртуального офиса».</li>
                                         <li>Для заключения договора на «Виртуальный офис» вам необходимо подать заявку
-                                            посредством персонального кабинета резидента на <a
-                                                href="https://it-market.uz/" target="_blank">www.it-market.uz</a>.</li>
+                                            посредством персонального кабинета резидента на <a href="https://it-market.uz/"
+                                                target="_blank">www.it-market.uz</a>.</li>
                                     </ul>
                                 </div>
                             </li>
@@ -868,7 +865,7 @@
                                     </p>
                                     <ul>
                                         <!-- <li>Составить договор аренды</li>
-                    <li>Подать заявление в отдел управления миграции и оформления гражданства Министерства внутренних дел Республики Узбекистан (<a href="http://gumiog.uz/" target="_blank">gumiog.uz</a>) об оформлении регистрации арендатора (иностранного гражданина) по месту временного пребывания в Республике Узбекистан.</li> -->
+                                                                    <li>Подать заявление в отдел управления миграции и оформления гражданства Министерства внутренних дел Республики Узбекистан (<a href="http://gumiog.uz/" target="_blank">gumiog.uz</a>) об оформлении регистрации арендатора (иностранного гражданина) по месту временного пребывания в Республике Узбекистан.</li> -->
 
                                     </ul>
                                     <p><b>для этого необходимы следующие документы:</b></p>
@@ -885,8 +882,7 @@
                                     data-bs-target="#faq-list-9">
                                     Как получить местную или валютную банковскую карту для физических лиц?
                                     <span class="collapse-toggle-icon">
-                                        <img src="{{ asset('img/logos/img/icons/plus.svg') }}" class="icon-show"
-                                            alt="">
+                                        <img src="{{ asset('img/logos/img/icons/plus.svg') }}" class="icon-show" alt="">
                                         <img src="{{ asset('img/logos/img/icons/minus.svg') }}" class="icon-close"
                                             alt="">
                                     </span>
@@ -1248,8 +1244,7 @@
                                 <div class="info-box heightFull">
                                     <img src="{{ asset('img/icons/sms.svg') }}" alt="">
                                     <h3>Email</h3>
-                                    <a href="mailto:itvisa@it-park.uz"><span
-                                            class="text-muted">itvisa@it-park.uz</span></a>
+                                    <a href="mailto:itvisa@it-park.uz"><span class="text-muted">itvisa@it-park.uz</span></a>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -1286,29 +1281,29 @@
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23964.15711357476!2d69.3571373!3d41.341057750000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef5672b0eb1ed%3A0x676a59b4e6bf3c7e!2sIT%20Park!5e0!3m2!1sru!2s!4v1646997642350!5m2!1sru!2s"
                             width="100%" height="386" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-success">Send Message</button>
-              </div>
-            </form> -->
+                                                              <div class="row">
+                                                                <div class="col-md-6 form-group">
+                                                                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                                                </div>
+                                                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                                                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                                                </div>
+                                                              </div>
+                                                              <div class="form-group mt-3">
+                                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                                              </div>
+                                                              <div class="form-group mt-3">
+                                                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                                                              </div>
+                                                              <div class="my-3">
+                                                                <div class="loading">Loading</div>
+                                                                <div class="error-message"></div>
+                                                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                                                              </div>
+                                                              <div class="text-center">
+                                                                <button type="submit" class="btn btn-success">Send Message</button>
+                                                              </div>
+                                                            </form> -->
                     </div>
 
                 </div>

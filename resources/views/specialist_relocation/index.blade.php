@@ -8,33 +8,33 @@
                             <thead>
                                 <tr>
                                     <th>Имя</th>
-                                    <th>Название компании</th>
-                                    <th>Деятельность</th>
+                                    <th>Специализация</th>
+                                    <th>Навыки</th>
                                     <th>Телефон номер</th>
-                                    <th>Эмайл</th>
+                                    <th>Город</th>
                                     <th>Действие</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($companies as $company)
-                                    <tr id="Id{{ $company->id }}">
-                                        <td>{{ $company->person_fio }}</td>
+                                @foreach ($specialists as $specialist)
+                                    <tr id="Id{{ $specialist->id }}">
+                                        <td>{{ $specialist->fio }}</td>
                                         <td>
-                                            {{ $company->name }}
+                                            {{ $specialist->specialization }}
                                         </td>
                                         <td>
-                                            {{ $company->activity }}
+                                            {{ $specialist->skills }}
                                         </td>
                                         <td>
-                                            {{ $company->phone }}
+                                            {{ $specialist->contact_number }}
                                         </td>
                                         <td>
-                                            {{ $company->email }}
+                                            {{ $specialist->city }}
                                         </td>
                                         <td>
                                             <div class="inline-block ml-4">
                                                 <span>
-                                                    <a href="{{ route('company.show', $company->id) }}"
+                                                    <a href="{{ route('specialist-relocation.show', $specialist->id) }}"
                                                         class="text-primary"><i class="fas fa-eye"
                                                             aria-hidden="true"></i></a>
                                                 </span>
@@ -44,9 +44,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        <a href="{{ route('admin.index') }}" class="btn btn-primary float-left mt-3">Назад</a>
                     </div>
                 </div>
-                <a href="{{ route('admin.index') }}" class="btn btn-primary float-left mt-3">Назад</a>
             </div>
         </div>
     @endsection

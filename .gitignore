@@ -2,6 +2,9 @@
 /public/hot
 /public/storage
 /public/specialist-relocation
+/public/investor
+/public/founder
+/public/specialist-visa
 /storage/*.key
 /vendor
 .env

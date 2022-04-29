@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SpecialistRelocation\StoreRequest;
-use App\Services\SpecialistRelocationService;
+use App\Http\Requests\SpecialistVisa\StoreRequest;
+use App\Services\SpecialistVisaService;
 use App\Traits\FileUpload;
-use Illuminate\Http\Request;
 
-class SpecialistRelocationController extends Controller
+class SpecialistVisaController extends Controller
 {
     use FileUpload;
     protected $service;
 
-    public function __construct(SpecialistRelocationService $service)
+    public function __construct(SpecialistVisaService $service)
     {
         $this->service = $service;
     }
@@ -20,27 +19,25 @@ class SpecialistRelocationController extends Controller
     public function index()
     {
         $specialists = $this->service->index();
-        return view('specialist_relocation.index', compact('specialists'));
+        return view('specialist_visa.index', compact('specialists'));
     }
 
     public function show(int $id)
     {
         $specialist = $this->service->show($id);
-        return view('specialist_relocation.show', compact('specialist'));
+        return view('specialist_visa.show', compact('specialist'));
     }
 
     public function create()
     {
-        return view('specialist_relocation.create');
+        return view('specialist_visa.create');
     }
 
     public function store(StoreRequest $request)
     {
         $params = $request->validated();
-        $params = $this->fileUpload($params, $request, 'specialist-relocation');
+        $params = $this->fileUpload($params, $request, 'specialist-visa');
         $this->service->create($params);
         return redirect()->route('home');
     }
-
-    
 }

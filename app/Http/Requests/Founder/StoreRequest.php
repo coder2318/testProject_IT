@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\SpecialistRelocation;
+namespace App\Http\Requests\Founder;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -25,15 +25,11 @@ class StoreRequest extends FormRequest
     {
         return [
             'fio' => 'required',
-            'specialization' => 'required',
-            'skills' => 'required',
-            'prof_level' => 'required',
-            'link_portfolio' => 'nullable',
-            'contact_number' => 'required',
-            'city' => 'required',
-            'employment' => 'nullable',
-            'employment_other' => 'required_if:employment,==,other',
-            'file' => 'required|file'
+            'file' => 'required|file',
+            'country' => 'required',
+            'file2' => 'required|file',
+            'phone' => 'required',
+            'email' => 'required|email',
         ];
     }
 }
