@@ -61,17 +61,20 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="#WhoCanGet">Кто может получить IT-Visa</a></li>
+                <li><a class="nav-link scrollto" href="#WhoCanGet">{{__('main.Кто может получить IT-Visa')}}</a></li>
                 <li><a class="nav-link scrollto" href="#privileges">Налоговые льготы</a></li>
                 <li><a class="nav-link scrollto" href="#ITParkHelps">IT Park помогает</a></li>
                 <li><a class="nav-link scrollto" href="#WhyUzbekistan">Почему Узбекистан?</a></li>
                 <li><a class="nav-link scrollto" href="#reviews">Отзывы</a></li>
                 <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Контакты</a></li>
-            </ul>
-            <a href="index-en.html" style="color: #7db92a; padding:10px 10px 10px 25px" class="lang-btn">
-                English
-            </a>
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                    <a style="color: #7db92a; padding:10px 10px 10px 25px" class="lang-btn" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        {{ $properties['native'] }}
+                    </a>
+                @endforeach
+
+
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 
