@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index'] )->name('home');
+Route::get('/thanks', [\App\Http\Controllers\HomeController::class, 'thanks'])->name('admin.thanks');
 
 
 Route::get('admin/dashboard', [\App\Http\Controllers\HomeController::class, 'admin'])->middleware('auth')->name('admin.dashboard');

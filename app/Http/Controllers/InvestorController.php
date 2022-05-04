@@ -39,6 +39,6 @@ class InvestorController extends Controller
         $params = $request->validated();
         $params = $this->fileUpload($params, $request, 'investor');
         $this->service->create($params);
-        return redirect()->route('home');
+        return redirect()->route('thanks');
     }
 }

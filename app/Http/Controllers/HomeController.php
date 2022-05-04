@@ -20,4 +20,9 @@ class HomeController extends Controller
     {
         return view('admin.layouts.app');
     }
+
+    public function thanks()
+    {
+        return view('thanks');
+    }
 }
