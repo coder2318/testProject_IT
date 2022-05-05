@@ -38,7 +38,7 @@
                         </tr>
                         <tr>
                             <th>Контакт (username) в телеграме</th>
-                            <td>{{ $investor->phone_number }}</td>
+                            <td>{{ $investor->username }}</td>
                         </tr>
                         <tr>
                             <th>Эмайл</th>

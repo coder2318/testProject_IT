@@ -6,8 +6,7 @@
         <div class="container mt-5">
             <div class="card" style="max-width: 60%; margin: 10px auto">
                 <div class="card-body">
-                    <div class="" style="text-align: center; font-size: 24px; font-weight: bold">@lang('form.founder')
-                        Заявка на IT-виза для учредителя</div>
+                    <div class="" style="text-align: center; font-size: 24px; font-weight: bold">@lang('form.founder')</div>
                     <form class="form-group" action="{{ route('founder.store') }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
