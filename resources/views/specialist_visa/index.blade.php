@@ -2,6 +2,7 @@
     @section('content')
         <div class="card m-4">
             <div class="card-body">
+                <h3>IT-специалисты</h3>
                 <div class="col-md-12">
                     <div class="table-responsive">
                         <table class="table table-bordered text-centet" id="dataTable" width="100%" cellspacing="0">
@@ -40,8 +41,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <a href="{{ route('specialist-relocation.index') }}"
-                            class="btn btn-primary float-left mt-3">Назад</a>
+                        <a href="{{ route('admin.dashboard') }}" class="btn btn-primary float-left mt-3">Назад</a>
 
                     </div>
                 </div>

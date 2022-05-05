@@ -2,7 +2,7 @@
     @section('content')
         <div class="card m-4">
             <div class="card-body">
-                <h3>Имя: {{ $specialist->fio }}</h1>
+                <h3>Имя IT-специалист: {{ $specialist->fio }}</h1>
                     <table class="table table-bordered">
                         <tbody>
                             <tr>

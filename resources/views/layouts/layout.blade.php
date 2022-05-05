@@ -61,13 +61,13 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="#WhoCanGet">{{__('main.Кто может получить IT-Visa')}}</a></li>
-                <li><a class="nav-link scrollto" href="#privileges">Налоговые льготы</a></li>
-                <li><a class="nav-link scrollto" href="#ITParkHelps">IT Park помогает</a></li>
-                <li><a class="nav-link scrollto" href="#WhyUzbekistan">Почему Узбекистан?</a></li>
-                <li><a class="nav-link scrollto" href="#reviews">Отзывы</a></li>
-                <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
-                <li><a class="nav-link scrollto" href="#contact">Контакты</a></li>
+                <li><a class="nav-link scrollto" href="#WhoCanGet">@lang('main.Кто может получить IT-Visa')</a></li>
+                <li><a class="nav-link scrollto" href="#privileges">@lang('main.Налоговые льготы')</a></li>
+                <li><a class="nav-link scrollto" href="#ITParkHelps">@lang('main.IT Park помогает')</a></li>
+                <li><a class="nav-link scrollto" href="#WhyUzbekistan">@lang('main.Почему Узбекистан?')</a></li>
+                <li><a class="nav-link scrollto" href="#reviews">@lang('main.Отзывы')</a></li>
+                <li><a class="nav-link scrollto" href="#faq">@lang('main.FAQ')</a></li>
+                <li><a class="nav-link scrollto" href="#contact">@lang('main.Контакты')</a></li>
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                     <a style="color: #7db92a; padding:10px 10px 10px 25px" class="lang-btn" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                         {{ $properties['native'] }}
@@ -119,7 +119,7 @@
     <div class="tgBtnWrap">
         <div class="tgBtnAnm"></div>
         <a href="https://t.me/itvisa" target="_blank" class="tgBtn">
-            <span>Задать вопрос</span>
+            <span>@lang('main.Задать вопрос')</span>
         </a>
     </div>
 
@@ -135,14 +135,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="container">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="forInvestorsModalLabel">Заявка на IT-Visa для инвестора</h5>
+                        <h5 class="modal-title" id="forInvestorsModalLabel">@lang('main.Заявка на IT-Visa для инвестора')</h5>
                     </div>
                     <form>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">ФИО</label>
+                                        <label for="fio" class="col-form-label">@lang('main.ФИО')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
@@ -150,17 +150,16 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Опишите вашу деятельность</label>
+                                        <label for="fio" class="col-form-label">@lang('main.Опишите вашу деятельность')</label>
                                         <textarea class="form-control" rows="8" id="message-text"></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="country" class="col-form-label">Документ подтверждающий<br> ваш
-                                            годовой доход</label>
+                                        <label for="country" class="col-form-label">@lang('main.Документ подтверждающий')<br>@lang('main.ваш годовой доход')</label>
                                         <div class="fileSelect">
                                             <label>
                                                 <input type="file">
                                                 <span class="btn btn-success" type="button">
-                                                    Прикрепить документ
+                                                @lang('main.Прикрепить документ')
                                                     <img src="{{ asset('img/icons/direct-send.svg') }}" alt="">
                                                 </span>
                                             </label>
@@ -169,16 +168,14 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Какие проекты планируете реализовать в
-                                            Узбекистане?</label>
+                                        <label for="fio" class="col-form-label">@lang('main.Какие проекты планируете реализовать в Узбекистане?')</label>
                                         <textarea class="form-control" rows="8" id="message-text"></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="country" class="col-form-label">Ходатайство от компании резидента
-                                            Узбекистана о реализации инвестиционного проекта с описанием и сути</label>
+                                        <label for="country" class="col-form-label">@lang('main.Ходатайство от компании резидента Узбекистана о реализации инвестиционного проекта с описанием и сути')</label>
                                         <div class="mb-3">
                                             <a href="#" class="btn btn-success">
-                                                Скачать шаблон
+                                               @lang('main.Скачать шаблон')
                                                 <img src="{{ asset('img/icons/direct-inbox.svg') }}" alt="">
                                             </a>
                                         </div>
@@ -186,7 +183,7 @@
                                             <label>
                                                 <input type="file">
                                                 <span class="btn btn-success" type="button">
-                                                    Прикрепить документ
+                                                @lang('main.Прикрепить документ')
                                                     <img src="{{ asset('img/icons/direct-send.svg') }}" alt="">
                                                 </span>
                                             </label>
@@ -197,21 +194,21 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Контактный номер телефона</label>
+                                        <label for="fio" class="col-form-label">@lang('main.phone')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Адрес электронной почты</label>
+                                        <label for="fio" class="col-form-label">@lang('main.email')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
                             </div>
                             <div class="text-end pt-3 pb-3">
                                 <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Отменить</button>
-                                <button type="submit" class="btn btn-success">Отправить</button>
+                                    data-bs-dismiss="modal">@lang('main.cancel')</button>
+                                <button type="submit" class="btn btn-success">@lang('main.Отправить')</button>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -220,7 +217,7 @@
                                     <div class="col-md-6">
                                         <div class="info-box heightFull">
                                             <img src="{{ asset('img/icons/zoom.svg') }}" alt="">
-                                            <h3>Забронировать<br> Zoom-звонок</h3>
+                                            <h3>@lang('main.Забронировать')<br>@lang('main.Zoom-звонок')</h3>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -249,14 +246,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="container">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="forTheFounderModalLabel">Заявка на IT-Visa для учредителя</h5>
+                        <h5 class="modal-title" id="forTheFounderModalLabel">@lang('main.Заявка на IT-Visa для учредителя')</h5>
                     </div>
                     <form>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">ФИО</label>
+                                        <label for="fio" class="col-form-label">@lang('main.fio')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
@@ -264,17 +261,16 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Опишите вашу деятельность</label>
+                                        <label for="fio" class="col-form-label">@lang('main.Опишите вашу деятельность')</label>
                                         <textarea class="form-control" rows="8" id="message-text"></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="country" class="col-form-label">Свидетельство о резидентстве в IT
-                                            Park</label>
+                                        <label for="country" class="col-form-label">@lang('main.Свидетельство о резидентстве в IT Park')</label>
                                         <div class="fileSelect">
                                             <label>
                                                 <input type="file">
                                                 <span class="btn btn-success" type="button">
-                                                    Прикрепить документ
+                                                    @lang('main.Прикрепить документ')
                                                     <img src="{{ asset('img/icons/direct-send.svg') }}" alt="">
                                                 </span>
                                             </label>
@@ -285,21 +281,21 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Контактный номер телефона</label>
+                                        <label for="fio" class="col-form-label">@lang('main.phone')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Адрес электронной почты</label>
+                                        <label for="fio" class="col-form-label">@lang('main.email')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
                             </div>
                             <div class="text-end pt-3 pb-3">
                                 <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Отменить</button>
-                                <button type="submit" class="btn btn-success">Отправить</button>
+                                    data-bs-dismiss="modal">@lang('main.cancel')</button>
+                                <button type="submit" class="btn btn-success">@lang('main.send')</button>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -308,7 +304,7 @@
                                     <div class="col-md-6">
                                         <div class="info-box heightFull">
                                             <img src="{{ asset('img/icons/zoom.svg') }}" alt="">
-                                            <h3>Забронировать<br> Zoom-звонок</h3>
+                                            <h3>@lang('main.Забронировать')<br>@lang('main.Zoom-звонок')</h3>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -339,18 +335,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="container">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="forSpecialistsModalLabel">Заявка на IT-Visa для IT специалистов</h5>
+                        <h5 class="modal-title" id="forSpecialistsModalLabel">@lang('main.Заявка на IT-Visa для IT специалистов')</h5>
                     </div>
                     <form>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">ФИО</label>
+                                        <label for="fio" class="col-form-label">@lang('main.fio')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Опишите вашу деятельность</label>
+                                        <label for="fio" class="col-form-label">@lang('main.Опишите вашу деятельность')</label>
                                         <textarea class="form-control" rows="8" id="message-text"></textarea>
                                     </div>
                                 </div>
@@ -358,13 +354,12 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="country" class="col-form-label">Свидетельство о резидентстве в IT
-                                            Park</label>
+                                        <label for="country" class="col-form-label">@lang('main.Свидетельство о резидентстве в IT Park')</label>
                                         <div class="fileSelect">
                                             <label>
                                                 <input type="file">
                                                 <span class="btn btn-success" type="button">
-                                                    Прикрепить документ
+                                                    @lang('main.Прикрепить документ')
                                                     <img src="{{ asset('img/icons/direct-send.svg') }}" alt="">
                                                 </span>
                                             </label>
@@ -373,11 +368,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="country" class="col-form-label">Ходатайство от компании резидента
-                                            Узбекистана о реализации инвестиционного проекта с описанием и сути</label>
+                                        <label for="country" class="col-form-label">@lang('main.Ходатайство от компании резидента Узбекистана о реализации инвестиционного проекта с описанием и сути')</label>
                                         <div class="mb-3">
                                             <a href="#" class="btn btn-success">
-                                                Скачать шаблон
+                                            @lang('main.Скачать шаблон')
                                                 <img src="{{ asset('img/icons/direct-inbox.svg') }}" alt="">
                                             </a>
                                         </div>
@@ -385,7 +379,7 @@
                                             <label>
                                                 <input type="file">
                                                 <span class="btn btn-success" type="button">
-                                                    Прикрепить документ
+                                                    @lang('main.Прикрепить документ')
                                                     <img src="{{ asset('img/icons/direct-send.svg') }}" alt="">
                                                 </span>
                                             </label>
@@ -396,21 +390,21 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Контактный номер телефона</label>
+                                        <label for="fio" class="col-form-label">@lang('main.phone')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Адрес электронной почты</label>
+                                        <label for="fio" class="col-form-label">@lang('main.email')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
                             </div>
                             <div class="text-end pt-3 pb-3">
                                 <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Отменить</button>
-                                <button type="submit" class="btn btn-success">Отправить</button>
+                                    data-bs-dismiss="modal">@lang('main.cancel')</button>
+                                <button type="submit" class="btn btn-success">@lang('main.cancel')</button>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -419,7 +413,7 @@
                                     <div class="col-md-6">
                                         <div class="info-box heightFull">
                                             <img src="{{ asset('img/icons/zoom.svg') }}" alt="">
-                                            <h3>Забронировать<br> Zoom-звонок</h3>
+                                            <h3>@lang('main.Забронировать')<br>@lang('main.Zoom-звонок')</h3>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -448,15 +442,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="container">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="forSpecialistsModalLabel">Заявка на IT-Visa для IT-компаний –
-                            релокантов</h5>
+                        <h5 class="modal-title" id="forSpecialistsModalLabel">@lang('main.Заявка на IT-Visa для IT-компаний – релокантов')</h5>
                     </div>
                     <form>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">ФИО</label>
+                                        <label for="fio" class="col-form-label">@lang('main.fio')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
@@ -464,14 +457,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Опишите вашу деятельность</label>
+                                        <label for="fio" class="col-form-label">@lang('main.Опишите вашу деятельность')</label>
                                         <textarea class="form-control" rows="8" id="message-text"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Имеется ли зарегистрированное юр.лицо в
-                                            Узбекистане или вы намерены открыть новое юр.лицо?</label>
+                                        <label for="fio" class="col-form-label">@lang('main.Имеется ли зарегистрированное юр.лицо в Узбекистане или вы намерены открыть новое юр.лицо?')</label>
                                         <textarea class="form-control" rows="8" id="message-text"></textarea>
                                     </div>
                                 </div>
@@ -479,15 +471,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Количество сотрудников, которые будут
-                                            релоцированы в Узбекистан</label>
+                                        <label for="fio" class="col-form-label">@lang('main.Количество сотрудников, которые будут релоцированы в Узбекистан')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Другая информация, которую вы считаете
-                                            полезной</label>
+                                        <label for="fio" class="col-form-label">@lang('main.Другая информация, которую вы считаете полезной')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
@@ -495,21 +485,21 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Контактный номер телефона</label>
+                                        <label for="fio" class="col-form-label">@lang('main.phone')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="fio" class="col-form-label">Адрес электронной почты</label>
+                                        <label for="fio" class="col-form-label">@lang('main.email')</label>
                                         <input type="text" class="form-control" id="fio">
                                     </div>
                                 </div>
                             </div>
                             <div class="text-end pt-3 pb-3">
                                 <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Отменить</button>
-                                <button type="submit" class="btn btn-success">Отправить</button>
+                                    data-bs-dismiss="modal">@lang('main.cancel')</button>
+                                <button type="submit" class="btn btn-success">@lang('main.send')</button>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -518,7 +508,7 @@
                                     <div class="col-md-6">
                                         <div class="info-box heightFull">
                                             <img src="{{ asset('img/icons/zoom.svg') }}" alt="">
-                                            <h3>Забронировать<br> Zoom-звонок</h3>
+                                            <h3>@lang('main.Забронировать')<br>@lang('main.Zoom-звонок')</h3>
                                         </div>
                                     </div>
                                     <div class="col-md-6">

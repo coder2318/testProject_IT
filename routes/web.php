@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaraveslLocalization;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,17 +19,31 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ], function () {
+    Route::get('/', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
+    Route::get('/thanks', [\App\Http\Controllers\HomeController::class, 'thanks'])->name('thanks');
+    Route::get('company/create', [\App\Http\Controllers\CompanyController::class, 'create'])->name('company.create');
+    Route::post('company/store', [\App\Http\Controllers\CompanyController::class, 'store'])->name('company.store');
+    Route::get('relocation/create', [\App\Http\Controllers\SpecialistRelocationController::class, 'create'])->name('specialist-relocation.create');
+    Route::post('relocation/store', [\App\Http\Controllers\SpecialistRelocationController::class, 'store'])->name('specialist-relocation.store');
+    Route::get('visa/create', [\App\Http\Controllers\SpecialistVisaController::class, 'create'])->name('specialist-visa.create');
+    Route::post('visa/store', [\App\Http\Controllers\SpecialistVisaController::class, 'store'])->name('specialist-visa.store');
+    Route::get('investr/create', [\App\Http\Controllers\InvestorController::class, 'create'])->name('investor.create');
+    Route::post('investr/store', [\App\Http\Controllers\InvestorController::class, 'store'])->name('investor.store');
+    Route::get('foundr/create', [\App\Http\Controllers\FounderController::class, 'create'])->name('founder.create');
+    Route::post('foundr/store', [\App\Http\Controllers\FounderController::class, 'store'])->name('founder.store');
 
-    Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/thanks', [\App\Http\Controllers\HomeController::class, 'thanks'])->name('admin.thanks');
 
+    
 
-    Route::get('admin/dashboard', [\App\Http\Controllers\HomeController::class, 'admin'])->middleware('auth')->name('admin.dashboard');
+});
+
+Route::get('admin/dashboard', [\App\Http\Controllers\HomeController::class, 'admin'])->middleware('auth')->name('admin.dashboard');
     Route::post('/login', [AuthController::class, 'login'])->name('admin.login');
     Route::post('/', [AuthController::class, 'logout'])->name('admin.logout');
     Route::get('/admin', [AuthController::class, 'index'])->name('admin.index');
@@ -35,39 +51,27 @@ Route::group(
 
     Route::group(['prefix' => 'admin/company', 'middleware' => 'auth'], function () {
         Route::get('/', [\App\Http\Controllers\CompanyController::class, 'index'])->name('company.index');
-        Route::get('create', [\App\Http\Controllers\CompanyController::class, 'create'])->name('company.create');
-        Route::post('store', [\App\Http\Controllers\CompanyController::class, 'store'])->name('company.store');
         Route::get('show/{company}', [\App\Http\Controllers\CompanyController::class, 'show'])->name('company.show');
 
     });
 
     Route::group(['prefix' => 'admin/relocation', 'middleware' => 'auth'], function () {
         Route::get('/', [\App\Http\Controllers\SpecialistRelocationController::class, 'index'])->name('specialist-relocation.index');
-        Route::get('create', [\App\Http\Controllers\SpecialistRelocationController::class, 'create'])->name('specialist-relocation.create');
-        Route::post('store', [\App\Http\Controllers\SpecialistRelocationController::class, 'store'])->name('specialist-relocation.store');
         Route::get('show/{specialist}', [\App\Http\Controllers\SpecialistRelocationController::class, 'show'])->name('specialist-relocation.show');
 
     });
 
     Route::group(['prefix' => 'admin/visa', 'middleware' => 'auth'], function () {
         Route::get('/', [\App\Http\Controllers\SpecialistVisaController::class, 'index'])->name('specialist-visa.index');
-        Route::get('create', [\App\Http\Controllers\SpecialistVisaController::class, 'create'])->name('specialist-visa.create');
-        Route::post('store', [\App\Http\Controllers\SpecialistVisaController::class, 'store'])->name('specialist-visa.store');
         Route::get('show/{specialist}', [\App\Http\Controllers\SpecialistVisaController::class, 'show'])->name('specialist-visa.show');
     });
 
     Route::group(['prefix' => 'admin/investr', 'middleware' => 'auth'], function () {
         Route::get('/', [\App\Http\Controllers\InvestorController::class, 'index'])->name('investor.index');
-        Route::get('create', [\App\Http\Controllers\InvestorController::class, 'create'])->name('investor.create');
-        Route::post('store', [\App\Http\Controllers\InvestorController::class, 'store'])->name('investor.store');
         Route::get('show/{investor}', [\App\Http\Controllers\InvestorController::class, 'show'])->name('investor.show');
     });
 
     Route::group(['prefix' => 'admin/foundr', 'middleware' => 'auth'], function () {
         Route::get('/', [\App\Http\Controllers\FounderController::class, 'index'])->name('founder.index');
-        Route::get('create', [\App\Http\Controllers\FounderController::class, 'create'])->name('founder.create');
-        Route::post('store', [\App\Http\Controllers\FounderController::class, 'store'])->name('founder.store');
         Route::get('show/{founder}', [\App\Http\Controllers\FounderController::class, 'show'])->name('founder.show');
     });
-
-});

@@ -25,10 +25,19 @@
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
+                @if (Session::has('login_failed'))
+                    <div class="alert alert-danger">
+                        Имя пользователя или пароль неверен
+                        @php
+                            Session::forget('login_failed');
+                        @endphp
+                    </div>
+                @endif
                 <p class="login-box-msg">Login</p>
 
                 <form action="{{ route('admin.login') }}" method="post">
                     @csrf
+                    <span style="color: #b02a37; font-weight: bold">{{ $errors->first('email') }}</span>
                     <div class="input-group mb-3">
                         <input type="text" name="email" class="form-control" placeholder="Login">
                         <div class="input-group-append">
@@ -36,6 +45,7 @@
                             </div>
                         </div>
                     </div>
+                    <span style="color: #b02a37; font-weight: bold">{{ $errors->first('password') }}</span>
                     <div class="input-group mb-3">
                         <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">

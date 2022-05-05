@@ -3,7 +3,7 @@
     <a href="/" class="brand-link">
         <img src="{{ asset('img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+        <span class="brand-text font-weight-light">IT - Visa Admin</span>
     </a>
 
     <!-- Sidebar -->
@@ -56,6 +56,13 @@
                 </li>
             </ul>
         </nav>
+        <div class="justify-bottom" style="margin-top: 100%">
+            <a href="{{ route('admin.logout') }}" class="nav-link"
+                onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </div>
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
