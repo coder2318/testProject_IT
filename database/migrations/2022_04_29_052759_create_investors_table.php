@@ -14,17 +14,29 @@ class CreateInvestorsTable extends Migration
     public function up()
     {
         Schema::create('investors', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('fio');
-            $table->string('file');
-            $table->string('country');
-            $table->string('activity');
+            $table->date('date_birth');
+            $table->string('sex');
+            $table->string('citizen');
+            $table->string('passport_number');
+            $table->string('passport_date');
+            $table->string('passport_expire');
+            $table->string('file4');
+            $table->string('adress');
+            $table->string('phone');
+            $table->string('additional_phone');
+            $table->string('file5');
             $table->string('project');
+            $table->longText('activity');
+            $table->string('file');
             $table->string('file2');
             $table->string('file3');
-            $table->string('phone_number');
-            $table->string('username');
-            $table->string('email');
+            $table->string('applicant_fio');
+            $table->string('applicant_position');
+            $table->string('applicant_phone_number');
+            $table->string('visa_date');
+            $table->string('conditions')->nullable();
             $table->timestamps();
         });
     }

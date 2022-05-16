@@ -11,7 +11,7 @@
                                     <th>Имя</th>
                                     <th>Страна</th>
                                     <th>Телефон номер</th>
-                                    <th>Эмайл</th>
+                                    <th>Дополнительный номер телефона</th>
                                     <th>Действие</th>
                                 </tr>
                             </thead>
@@ -20,13 +20,13 @@
                                     <tr id="Id{{ $specialist->id }}">
                                         <td>{{ $specialist->fio }}</td>
                                         <td>
-                                            {{ $specialist->country }}
+                                            {{ $specialist->citizen }}
                                         </td>
                                         <td>
                                             {{ $specialist->phone }}
                                         </td>
                                         <td>
-                                            {{ $specialist->email }}
+                                            {{ $specialist->additional_phone }}
                                         </td>
                                         <td>
                                             <div class="inline-block ml-4">

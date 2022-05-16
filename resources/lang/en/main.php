@@ -251,7 +251,7 @@ return [
     "Контакты" => "Contacts",
     "Еще..." => "More...",
     "Налоговые льготы" => "Tax preferences",
-    "IT Park помогает" => "IT Park helps",
+    "IT Park помогает" => "IT Park support",
     "Отзывы" => "Feedback",
     "FAQ" => "FAQ",
     "Задать вопрос" => "Ask a question",

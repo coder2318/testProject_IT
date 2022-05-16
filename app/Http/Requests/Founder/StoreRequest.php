@@ -25,11 +25,30 @@ class StoreRequest extends FormRequest
     {
         return [
             'fio' => 'required',
-            'file' => 'required|file',
-            'country' => 'required',
-            'file2' => 'required|file',
+            'date_birth' => 'required',
+            'sex' => 'required',
+            'citizen' => 'required',
+            'passport_number' => 'required',
+            'passport_date' => 'required',
+            'passport_expire' => 'required',
+            'file4' => 'required|file',
+            'file5' => 'required|file',
+            'adress' => 'required',
             'phone' => 'required',
-            'email' => 'required|email',
+            'additional_phone' => 'required',
+            'company_name' => 'required',
+            'company_name' => 'required',
+            'applicant_fio' => 'required',
+            'applicant_position' => 'required',
+            'applicant_phone_number' => 'required',
+            'conditions' => 'required',
+            'visa_date' => 'required',
+            'reletion_level.*' => 'nullable',
+            'reletion_fio.*' => 'nullable',
+            'reletion_birth.*' => 'nullable',
+            'reletion_citizen.*' => 'nullable',
+            'file6.*' => 'nullable|file',
+
         ];
     }
 }

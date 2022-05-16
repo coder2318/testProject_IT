@@ -11,7 +11,7 @@
                                     <th>Имя</th>
                                     <th>Страна</th>
                                     <th>Телефон номер</th>
-                                    <th>Эмайл</th>
+                                    <th>Дополнительный номер телефона</th>
                                     <th>Действие</th>
                                 </tr>
                             </thead>
@@ -20,13 +20,13 @@
                                     <tr id="Id{{ $investor->id }}">
                                         <td>{{ $investor->fio }}</td>
                                         <td>
-                                            {{ $investor->country }}
+                                            {{ $investor->citizen }}
                                         </td>
                                         <td>
-                                            {{ $investor->phone_number }}
+                                            {{ $investor->phone }}
                                         </td>
                                         <td>
-                                            {{ $investor->email }}
+                                            {{ $investor->additional_phone }}
                                         </td>
                                         <td>
                                             <div class="inline-block ml-4">

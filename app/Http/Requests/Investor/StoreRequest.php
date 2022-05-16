@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Investor;
+namespace App\Http\Requests\SpecialistVisa;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -25,14 +25,33 @@ class StoreRequest extends FormRequest
     {
         return [
             'fio' => 'required',
+            'date_birth' => 'required',
+            'sex' => 'required',
+            'citizen' => 'required',
+            'passport_number' => 'required',
+            'passport_date' => 'required',
+            'passport_expire' => 'required',
+            'file4' => 'required|file',
+            'adress' => 'required',
+            'phone' => 'required',
+            'additional_phone' => 'required',
+            'file5' => 'required|file',
+            'company_name' => 'required',
+            'adress_specialist' => 'required',
             'file' => 'required|file',
-            'country' => 'required',
-            'activity' => 'required',
-            'project' => 'required',
+            'phone_specialist' => 'required',
             'file2' => 'required|file',
-            'phone_number' => 'required',
-            'username' => 'nullable',
-            'email' => 'required|email',
+            'file3' => 'required|file',
+            'applicant_fio' => 'required',
+            'applicant_position' => 'required',
+            'applicant_phone_number' => 'required',
+            'visa_date' => 'required',
+            'conditions' => 'required',
+            'reletion_level.*' => 'nullable',
+            'reletion_fio.*' => 'nullable',
+            'reletion_birth.*' => 'nullable',
+            'reletion_citizen.*' => 'nullable',
+            'file6.*' => 'nullable|file',
         ];
     }
 }

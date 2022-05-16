@@ -10,10 +10,27 @@ class Founder extends Model
     use HasFactory;
     protected $fillable = [
         'fio',
-        'file',
-        'country',
-        'file2',
+        'date_birth',
+        'sex',
+        'citizen',
+        'passport_number',
+        'passport_date',
+        'passport_expire',
+        'file4',
+        'adress',
         'phone',
-        'email',
+        'company_name',
+        'additional_phone',
+        'file5',
+        'conditions',
+        'applicant_fio',
+        'applicant_position',
+        'applicant_phone_number',
+        'visa_date'
     ];
+
+    public function reletions()
+    {
+        return $this->hasMany(Reletion::class, 'founder_id', 'id');
+    }
 }
