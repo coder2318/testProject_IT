@@ -34,6 +34,8 @@ class BaseRepository
         $query = $this->getById($id);
         if ($query) {
             $query->update($params);
+//            dd($params);
+
             return $query;
         } else {
             return false;

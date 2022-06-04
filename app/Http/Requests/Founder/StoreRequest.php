@@ -37,10 +37,7 @@ class StoreRequest extends FormRequest
             'phone' => 'required',
             'additional_phone' => 'required',
             'company_name' => 'required',
-            'company_name' => 'required',
-            'applicant_fio' => 'required',
-            'applicant_position' => 'required',
-            'applicant_phone_number' => 'required',
+            'file2' => 'required|file',
             'conditions' => 'required',
             'visa_date' => 'required',
             'reletion_level.*' => 'nullable',
@@ -48,6 +45,7 @@ class StoreRequest extends FormRequest
             'reletion_birth.*' => 'nullable',
             'reletion_citizen.*' => 'nullable',
             'file6.*' => 'nullable|file',
+            'reletion.*' => 'nullable'
 
         ];
     }

@@ -54,6 +54,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('application.index') }}" class="nav-link  ">
+                        <i class="nav-icon fas fa-user-tie"></i>
+                        <p>
+                            Единый электронный реестр выданных рекомендаций
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <div class="justify-bottom" style="margin-top: 100%">

@@ -179,7 +179,7 @@ class BaseService
      * @param $id
      * @return mixed
      */
-    public function edit($params, $id)
+    public function update($params, $id)
     {
         return $this->repo->update($params, $id);
 

@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <div class="" style="text-align: center; font-size: 24px; font-weight: bold">@lang('form.founder')</div>
                     <form class="form-group" action="{{ route('founder.store') }}" method="POST"
-                        enctype="multipart/form-data">
+                          enctype="multipart/form-data">
                         @csrf
                         <label for="fio" class="mb-2 mt-3"><b>@lang('form.fio')</b></label>
                         <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('fio') }}</span>
@@ -56,6 +56,8 @@
                             <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
                                    onclick="document.getElementById('file4').click();" />
                             <input type="file" style="display:none;" id="file4" name="file4" />
+                            <label class=selected>@lang('form.no_choosen')</label>
+
                         </div>
 
                         <div>
@@ -64,6 +66,8 @@
                             <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
                                    onclick="document.getElementById('file5').click();" />
                             <input type="file" style="display:none;" id="file5" name="file5" />
+                            <label class=selected>@lang('form.no_choosen')</label>
+
                             <br><i class="text-muted">
                                 <b>@lang('form.one_photo')</b><br>
                                 @lang('form.photo_requirement')
@@ -133,6 +137,8 @@
                             <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
                                    onclick="document.getElementById('file6').click();" />
                             <input type="file" style="display:none;" id="file6" name="file6[]" />
+                            <label class=selected>@lang('form.no_choosen')</label>
+
                         </div>
                         <div class="newElement"></div>
                         <div id="addElement">
@@ -142,43 +148,27 @@
                                     value="+" />
                             </span>
                         </div>
+                        <div>
+                            <label for="file2" class="mb-2 mt-3"><b>@lang('form.sertificate')</b></label>
+                            <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('file2') }}</span>
+                            <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
+                                   onclick="document.getElementById('file2').click();" />
+                            <input type="file" style="display:none;" id="file2" name="file2" />
+                            <label class=selected>@lang('form.no_choosen')</label>
+
+                        </div>
+
                         <label for="company_name" class="mb-2 mt-3"><b>@lang('form.company_name')</b></label>
                         <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('company_name') }}</span>
                         <input id="company_name" class="form-control p-2 ps-3" type="text" style="border-radius: 10px"
                                name="company_name" value="{{ old('company_name') }}">
-                        <div>
-                            <label for="applicant_fio" class="mb-2 mt-3"><b>@lang('form.applicant_fio')</b></label>
-                            <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('applicant_fio') }}</span>
-                            <input id="applicant_fio" class="form-control p-2 ps-3" type="text" style="border-radius: 10px" name="applicant_fio"
-                                   value="{{ old('applicant_fio') }}">
-                        </div>
-                        <div>
-                            <label for="applicant_position"
-                                   class="mb-2 mt-3"><b>@lang('form.applicant_position')</b></label>
-                            <span style="color: #b02a37; font-weight: bold">*
-                                {{ $errors->first('applicant_position') }}</span>
-                            <input id="applicant_position" class="form-control p-2 ps-3" type="text"
-                                   style="border-radius: 10px" name="applicant_position"
-                                   value="{{ old('applicant_position') }}">
-                        </div>
-                        <label for="applicant_phone_number"
-                               class="mb-2 mt-3"><b>@lang('form.applicant_phone_number')</b></label>
-                        <span style="color: #b02a37; font-weight: bold">*
-                            {{ $errors->first('applicant_phone_number') }}</span>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text p-2 ps-3" id="basic-addon1">+</span>
-                            </div>
-                            <input id="applicant_phone_number" class="form-control p-2 ps-3" type="number"
-                                   aria-describedby="basic-addon1" style="border-radius: 0 10px 10px 0"
-                                   name="applicant_phone_number" value="{{ old('applicant_phone_number') }}">
-                        </div>
+
                         <label for="expire_date" class="mb-2 mt-3"><b>@lang('form.visa_date')</b></label>
                         <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('visa_date') }}</span>
                         <div class="form-group" style="margin-right: 50%">
                             <div style=" display: inline-block;">
-                            <select class="form-control p-2 ps-3"  id="sel1" name="visa_date">
-                                <option>3</option>
+                                <select class="form-control p-2 ps-3"  id="sel1" name="visa_date">
+                                    <option>3</option>
                                     <option>4</option>
                                     <option>5</option>
                                     <option>6</option>
@@ -188,7 +178,7 @@
                                     <option>10</option>
                                     <option>11</option>
                                     <option>12</option>
-									<option>13</option>
+                                    <option>13</option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -212,21 +202,23 @@
                                     <option>34</option>
                                     <option>35</option>
                                     <option>36</option>
-                            </select>
+                                </select>
                             </div>
                             <div style=" display: inline-block;">
-                            <span>@lang('form.month')</span>
+                                <span>@lang('form.month')</span>
                             </div>
                         </div>
                         <i class="text-muted">@lang('form.visa_expire')</i>
 
                         <div>
                             <label for="checkbox"><a @if ( app()->getLocale() == 'ru') href="{{ asset('files/conditions.pdf') }}" @else href="{{ asset('files/conditions_en.pdf') }}"
-                            @endif target="_blank">@lang('form.terms_conditions')</a></label>
+                                                     @endif target="_blank">@lang('form.terms_conditions')</a></label>
                             <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('conditions') }}</span>
                             <input style="margin-left:5px" id="checkbox" type="checkbox" name="conditions">
                         </div>
                         <input type="submit" class="btn btn-outline-success mt-4" value="{{ __('form.save') }}">
+                        <label style="display:none" id="lable">{{ __('form.choosen') }}</label>
+
                     </form>
                 </div>
             </div>
@@ -237,6 +229,10 @@
 @push('script')
     <script>
         $(document).ready(function() {
+            var filename3 = $('#lable').text();
+            $(document).delegate("input:file", "change", function() {
+                $(this).parent().find('.selected').html(filename3);
+            });
             $('textarea').val($('textarea').val().trim());
             $("#addElement").click(function() {
                 var id = new Date().getTime();
@@ -254,8 +250,9 @@
                     '<input id="reletion_citizen" class="form-control p-2 ps-3" type="text" style="border-radius: 10px" name="reletion_citizen[]" value="">' +
                     '<div><label for="file6" class="mb-2 mt-3"><b>{{ __('form.reletion_passport_copy') }}</b></label>' +
                     '<span style="color: #b02a37; font-weight: bold">* {{ $errors->first('file6') }}</span>' +
-                    '<input type="button" id="loadFileXml" value="{{ __('form.upload') }}" onclick="document.getElementById('+id+').click();" ><input type="file" style="display:none;" id="' + id + '" name="file6[]" ></div>').insertBefore("#addElement");
-
+                    '<input type="button" id="loadFileXml" value="{{ __('form.upload') }}" onclick="document.getElementById('+id+').click();" ><input type="file" style="display:none;" id="' + id + '" name="file6[]" >' +
+                    '<label class=selected>@lang('form.no_choosen')</label>' +
+                    '</div>').insertBefore("#addElement");
             })
         });
 

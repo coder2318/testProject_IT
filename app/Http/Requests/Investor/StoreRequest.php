@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\SpecialistVisa;
+namespace App\Http\Requests\Investor;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -32,26 +32,26 @@ class StoreRequest extends FormRequest
             'passport_date' => 'required',
             'passport_expire' => 'required',
             'file4' => 'required|file',
+            'file5' => 'required|file',
             'adress' => 'required',
             'phone' => 'required',
-            'additional_phone' => 'required',
-            'file5' => 'required|file',
-            'company_name' => 'required',
-            'adress_specialist' => 'required',
+            'project' => 'required',
+            'activity' => 'required',
             'file' => 'required|file',
-            'phone_specialist' => 'required',
             'file2' => 'required|file',
             'file3' => 'required|file',
             'applicant_fio' => 'required',
             'applicant_position' => 'required',
             'applicant_phone_number' => 'required',
-            'visa_date' => 'required',
             'conditions' => 'required',
+            'visa_date' => 'required',
+            'additional_phone' => 'required',
             'reletion_level.*' => 'nullable',
             'reletion_fio.*' => 'nullable',
             'reletion_birth.*' => 'nullable',
             'reletion_citizen.*' => 'nullable',
             'file6.*' => 'nullable|file',
+
         ];
     }
 }

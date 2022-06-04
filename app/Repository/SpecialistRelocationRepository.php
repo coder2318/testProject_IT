@@ -13,6 +13,12 @@ class SpecialistRelocationRepository extends BaseRepository
 
     public function index()
     {
-        return $this->entity->get();
+        return $this->entity->paginate(10);
+    }
+    public function edit($id)
+    {
+        $specialist = SpecialistRelocation::find($id);
+
+        return $specialist;
     }
 }

@@ -4,6 +4,7 @@
 /public/specialist-relocation
 /public/investor
 /public/founder
+/public/qr-code
 /public/specialist-visa
 /storage/*.key
 /vendor

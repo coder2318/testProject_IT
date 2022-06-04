@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Founder\StoreRequest;
+use App\Http\Requests\Founder\UpdateRequest;
 use App\Services\FounderService;
 use App\Traits\FileUpload;
 
@@ -39,5 +40,29 @@ class FounderController extends Controller
         $params = $this->fileUpload($params, $request, 'founder');
         $this->service->create($params);
         return redirect()->route('thanks');
+    }
+
+    public function edit(int $id)
+    {
+        $founder = $this->service->edit($id);
+        return view('founder.edit', compact('founder'));
+    }
+
+    public function update(int $id, UpdateRequest $request)
+    {
+        $params = $request->validated();
+        $params = $this->fileUpload($params, $request, 'founder');
+        $founder = $this->service->update($params,$id);
+        return redirect()->route('founder.index');
+    }
+
+    public function delete(int $id)
+    {
+        try {
+            $this->service->delete($id);
+            return redirect()->route('founder.index');
+        } catch (\Throwable $th) {
+            dd($th);
+        }
     }
 }

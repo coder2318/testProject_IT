@@ -1,0 +1,230 @@
+
+
+
+
+
+
+
+
+
+
+{{--<!DOCTYPE html>--}}
+{{--<!-- Created by pdf2htmlEX (https://github.com/pdf2htmlEX/pdf2htmlEX) -->--}}
+{{--<html xmlns="http://www.w3.org/1999/xhtml">--}}
+{{--<head>--}}
+{{--    <meta charset="utf-8"/>--}}
+{{--    <meta name="generator" content="pdf2htmlEX"/>--}}
+{{--    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>--}}
+{{--    <title></title>--}}
+{{--    <style>--}}
+
+{{--        body {--}}
+{{--            font-family: "dejavu sans";--}}
+{{--            margin: 10px 30px 20px 30px;--}}
+{{--            font-size: 12px;--}}
+{{--        }--}}
+
+{{--    </style>--}}
+{{--</head>--}}
+{{--<body>--}}
+{{--<div style="">--}}
+{{--    <div style="float: right; "><img src="{{$avatar}}" alt="" width="150" height="150"></div>--}}
+{{--    <div style="display: inline-block!important;">--}}
+{{--        @if($resume->created_at)--}}
+{{--            <span>Резюме от {{date_format($resume->created_at, 'd-m-Y')}}</span><br>--}}
+{{--        @endif--}}
+{{--        <span style="font-size: 22px; font-weight: bold; margin-bottom: 10px">{{$resume->first_name.' '.$resume->last_name}}</span>--}}
+{{--    </div>--}}
+
+{{--    <div>--}}
+{{--        <p style="font-size: 18px; margin: 1px; font-weight: bold">@if(!$resume->position->isEmpty())@foreach($resume->position as $position) {{$position->name_ru}}@if (!$loop->last),@endif @endforeach @endif @if($resume->wanted_salary)<span>, {{number_format($resume->wanted_salary,0,'',' ')}} {{$resume->salary_currency}}</span>@endif</p>--}}
+{{--        <div style="width: 60%">--}}
+{{--            @foreach($resume->employment_type_id as $key=>$item)--}}
+{{--                @php--}}
+{{--                    $form_options = config('form-options.employment_types');--}}
+{{--                    $ids = array_column($form_options, 'id');--}}
+{{--                    $empl_type = array_search($item, $ids, true);--}}
+{{--                @endphp--}}
+{{--            {{$form_options[$empl_type]['name_ru']}}{{((sizeof($resume->employment_type_id)-1) == $key) ? '' : ', '}}--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--        <div>Возраст: <span style="position:absolute; margin-left: 100px">{{$resume->age}} лет</span></div>--}}
+{{--        <div>Город: <span style="position:absolute; margin-left: 100px">{{$resume->region ? $resume->region->name_ru : ''}}</span></div>--}}
+{{--    </div>--}}
+
+{{--    <div>--}}
+{{--        <p style="font-size: 18px; margin: 1px; font-weight: bold">Контактная информация</p>--}}
+{{--        <div>Телефон: <span style="margin-left: 100px">{{$resume->phone_number}}</span></div>--}}
+{{--        <div>Эл. почта: <span style="margin-left: 100px">{{$resume->email}}</span></div>--}}
+{{--    </div>--}}
+
+{{--    @if($resume->experiences && sizeof($resume->experiences) > 0)--}}
+{{--    <div>--}}
+{{--        <p style="font-size: 18px; margin: 1px; font-weight: bold">Опыт работы</p>--}}
+{{--            @foreach($resume->experiences as $exp)--}}
+{{--                <p>--}}
+{{--                    <span><b>{{$exp->company_name}}</b></span><br>--}}
+{{--                    <span>{{$exp->start_date}} — {{$exp->end_date ?? 'по настоящее время'}} <span style="opacity: 0.4">--}}
+{{--                        @php--}}
+{{--                            $years  = '';--}}
+{{--                            $months = '';--}}
+{{--                                if(is_float($exp->experience_month/12)) {--}}
+{{--                                    if(floor($exp->experience_month / 12) == 0) {--}}
+{{--                                       $years  = '';--}}
+{{--                                    } elseif ($years > 1 && $years < 5)--}}
+{{--                                        $years = floor($exp->experience_month / 12).' Года';--}}
+{{--                                    elseif ($years >=5)--}}
+{{--                                        $years = floor($exp->experience_month / 12).' Лет';--}}
+{{--                                    else--}}
+{{--                                        $years = floor($exp->experience_month / 12).' Год';--}}
+{{--                                }--}}
+
+{{--                                $months = $exp->experience_month % 12;--}}
+{{--                                if($months !== 0){--}}
+{{--                                    if($months > 1 && $months < 5) {--}}
+{{--                                        $months = ' '.$months.' Месяца';--}}
+{{--                                    } else if($months >= 5)--}}
+{{--                                        $months = ' '.$months.' Месяцев';--}}
+{{--                                    else--}}
+{{--                                        $months = ' '.$months.' Месяц';--}}
+{{--                                }--}}
+{{--                        @endphp--}}
+{{--                            ({{$years}} {{$months}})--}}
+{{--                        </span></span><br>--}}
+{{--                    <span > <span style="opacity: 0.4"> Должность - </span> <b>{{$exp->position_name}}</b> </span><br>--}}
+{{--                    <span > <span style="opacity: 0.4"> Местоположение - </span> <b>@if($exp->country){{$exp->country->name_ru}} - @endif @if($exp->region){{$exp->region->name_ru}}@endif</b> </span><br>--}}
+{{--                    <span > <span style="opacity: 0.4"> Обязанности и достижения -  </span> <span  style="text-align: justify!important;"><?= $exp->position_description?> </span>--}}
+{{--                    </span>--}}
+{{--                </p>--}}
+{{--            @endforeach--}}
+{{--    </div>--}}
+{{--    @endif--}}
+
+{{--    @if($resume->educations && sizeof($resume->educations) > 0)--}}
+{{--    <div>--}}
+{{--        <p style="font-size: 18px; margin: 1px; font-weight: bold">Уровень образования</p>--}}
+{{--            @foreach($resume->educations as $edu)--}}
+{{--                @php--}}
+{{--                    $form_options = config('form-options.education_levels');--}}
+{{--                    $ids = array_column($form_options, 'id');--}}
+{{--                    $edu_level = array_search($edu->education_level_id, $ids, true);--}}
+{{--                @endphp--}}
+{{--                <p>--}}
+{{--                    <span style="opacity: 0.7">{{$form_options[$edu_level]['name_ru']}}</span><br>--}}
+{{--                    <span><b>{{$edu->education_place}}</b></span><br>--}}
+{{--                    <span>@if($edu->country){{$edu->country->name_ru}} -@endif @if($edu->region){{$edu->region->name_ru}}@endif</span><br>--}}
+{{--                    <span > Специализация - </span> <b>{{$edu->specialization}}</b><br>--}}
+{{--                    <span > {{$edu->end_year??date_format( date_create(now()), 'Y')}}</span> г--}}
+{{--                </p>--}}
+{{--            @endforeach--}}
+{{--    </div>--}}
+{{--    @endif--}}
+
+{{--    @if($resume->languages)--}}
+{{--    <div>--}}
+{{--        <p style="font-size: 18px; margin: 1px; font-weight: bold">Знание языков</p>--}}
+{{--        @foreach($resume->languages as $lang)--}}
+{{--            <span> {{$lang['language_names']['name_ru']}} — <span style="opacity: 0.4"> {{$lang['language_level_names']['name_ru']}} </span>  </span><br>--}}
+{{--        @endforeach--}}
+{{--    </div>--}}
+{{--    @endif--}}
+
+{{--    @if($resume->skills)--}}
+{{--    <div><p style="font-size: 18px; margin: 0 0 10px; font-weight: bold">Навыки</p>--}}
+{{--        @foreach($resume->skills as $skil)--}}
+{{--                <div--}}
+{{--                    style="--}}
+{{--                    background: rgba(65, 76, 160, 0.1);--}}
+{{--                    color: rgba(0,0,0,0.6);--}}
+{{--                    margin-right: 5px;--}}
+{{--                    padding: 1px 11px 0;--}}
+{{--                    height: 24px;--}}
+{{--                    display: inline-block;--}}
+{{--                    border-radius: 3px">--}}
+{{--                    <span>{{$skil['name_ru']}}</span>--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
+{{--    </div>--}}
+{{--    @endif--}}
+
+{{--    <div>--}}
+{{--        <p style="font-size: 18px; margin: 1px; font-weight: bold">Опыт вождения</p>--}}
+{{--        <span > {{$resume->has_car ? 'Имеется собственный автомобиль': 'Нет личного автомобиля'}} </span><br>--}}
+{{--        @if($resume->driver_rights && sizeof($resume->driver_rights) > 0)--}}
+{{--        <span > Права категории  <span style="opacity: 0.4">--}}
+{{--                    @foreach($resume->driver_rights as $key=>$dr_r)--}}
+{{--                        {{$dr_r}}{{((sizeof($resume->driver_rights)-1) == $key) ? '' : ', '}}--}}
+{{--                    @endforeach--}}
+{{--            </span>  </span>--}}
+{{--        @endif--}}
+{{--    </div>--}}
+
+{{--    @if($resume->about)--}}
+{{--        <div>--}}
+{{--            <p style="font-size: 18px; margin: 1px; font-weight: bold">Дополнительная информация</p>--}}
+{{--            <span > <?=$resume->about?>--}}
+{{--            </span>--}}
+{{--        </div>--}}
+{{--    @endif--}}
+{{--    @if($resume->seekerCourses && sizeof($resume->seekerCourses) > 0)--}}
+{{--    <div>--}}
+{{--        <p style="font-size: 18px; margin: 1px;; font-weight: bold">Дополнительное образование</p>--}}
+{{--                    @foreach($resume->seekerCourses as $cources)--}}
+{{--                        <p>--}}
+{{--                            <span><b>{{$cources->education_place}}</b></span><br>--}}
+{{--                            <span > Специализация - </span> <b>{{$cources->specialization}}</b><br>--}}
+{{--                            <span > {{$cources->end_date??date_format( date_create($cources->end_date), 'd-m-Y')}}</span> г--}}
+{{--                        </p>--}}
+{{--                    @endforeach--}}
+{{--    </div>--}}
+{{--    @endif--}}
+
+{{--    @if($resume->computer_level_id)--}}
+{{--    <div><p style="font-size: 18px; margin: 1px; font-weight: bold">Знание компьютера</p>--}}
+{{--            @php--}}
+{{--                $form_options = config('form-options.computer_levels');--}}
+{{--                $ids = array_column($form_options, 'id');--}}
+{{--                $comp_level = array_search($resume->computer_level_id, $ids, true);--}}
+{{--            @endphp--}}
+{{--        <div--}}
+{{--            style="--}}
+{{--                    background: rgba(65, 76, 160, 0.1);--}}
+{{--                    color: rgba(0,0,0,0.6);--}}
+{{--                    margin-right: 5px;--}}
+{{--                    padding: 1px 11px 0;--}}
+{{--                    height: 24px;--}}
+{{--                    display: inline-block;--}}
+{{--                    border-radius: 3px">--}}
+{{--            <span>{{$form_options[$comp_level]['name_ru']}}</span>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--    @endif--}}
+
+
+
+{{--</div>--}}
+{{--<div>--}}
+
+{{--</div>--}}
+{{--</body>--}}
+{{--</html>--}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

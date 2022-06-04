@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSpecialistVisasTable extends Migration
+class CreateFoundersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,30 +13,23 @@ class CreateSpecialistVisasTable extends Migration
      */
     public function up()
     {
-        Schema::create('specialist_visas', function (Blueprint $table) {
-            $table->id();
-            $table->string('fio');
-            $table->string('date_birth');
-            $table->string('sex');
-            $table->string('citizen');
-            $table->string('passport_number');
-            $table->string('passport_date');
-            $table->string('passport_expire');
-            $table->string('file4');
-            $table->string('adress');
-            $table->string('phone');
-            $table->string('additional_phone');
-            $table->string('file5');
-            $table->string('company_name');
-            $table->string('adress_specialist');
-            $table->string('file');
-            $table->string('phone_specialist');
-            $table->string('file2');
-            $table->string('file3');
-            $table->string('applicant_fio');
-            $table->string('applicant_position');
-            $table->string('applicant_phone_number');
-            $table->string('visa_date');
+        Schema::create('founders', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('fio')->nullable();
+            $table->date('date_birth')->nullable();
+            $table->string('sex')->nullable();
+            $table->string('citizen')->nullable();
+            $table->string('passport_number')->nullable();
+            $table->string('passport_date')->nullable();
+            $table->string('passport_expire')->nullable();
+            $table->string('file4')->nullable();
+            $table->string('adress')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('additional_phone')->nullable();
+            $table->string('file5')->nullable();
+            $table->string('file2')->nullable();
+            $table->string('visa_date')->nullable();
             $table->string('conditions')->nullable();
             $table->timestamps();
         });
@@ -49,6 +42,6 @@ class CreateSpecialistVisasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('specialist_visas');
+        Schema::dropIfExists('founders');
     }
 }

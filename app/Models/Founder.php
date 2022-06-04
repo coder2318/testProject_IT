@@ -23,10 +23,8 @@ class Founder extends Model
         'additional_phone',
         'file5',
         'conditions',
-        'applicant_fio',
-        'applicant_position',
-        'applicant_phone_number',
-        'visa_date'
+        'visa_date',
+        'file2'
     ];
 
     public function reletions()

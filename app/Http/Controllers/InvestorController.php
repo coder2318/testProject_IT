@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Investor\UpdateRequest;
 use App\Http\Requests\Investor\StoreRequest;
 use App\Services\InvestorService;
 use App\Traits\FileUpload;
@@ -40,5 +41,30 @@ class InvestorController extends Controller
         $params = $this->fileUpload($params, $request, 'investor');
         $this->service->create($params);
         return redirect()->route('thanks');
+    }
+
+
+    public function edit(int $id)
+    {
+        $investor = $this->service->edit($id);
+        return view('investor.edit', compact('investor'));
+    }
+
+    public function update(int $id, UpdateRequest $request)
+    {
+        $params = $request->validated();
+        $params = $this->fileUpload($params, $request, 'investor');
+        $investor = $this->service->update($params,$id);
+        return redirect()->route('investor.index');
+    }
+
+    public function delete(int $id)
+    {
+        try {
+            $this->service->delete($id);
+            return redirect()->route('investor.index');
+        } catch (\Throwable $th) {
+            dd($th);
+        }
     }
 }

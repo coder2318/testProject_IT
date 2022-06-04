@@ -1,6 +1,7 @@
 <?php
 
 return [
+    "no_choosen" => "File not selected",
     "fio" => "Full Name",
     "date_birth" => "Date of birth (day-month-year)",
     "sex" => "Sex",
