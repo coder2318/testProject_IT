@@ -109,28 +109,23 @@
                         </div>
                         <h5>@lang('form.title_reletion')</h5>
                         <label for="reletion_level" class="mb-2 mt-3"><b>@lang('form.reletion_level')</b></label>
-                        <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('reletion_level[]') }}</span>
                         <input id="reletion_level" class="form-control p-2 ps-3" type="text" style="border-radius: 10px"
                                name="reletion_level[]" value="">
 
                         <label for="reletion_fio" class="mb-2 mt-3"><b>@lang('form.reletion_fio')</b></label>
-                        <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('reletion_fio') }}</span>
                         <input id="reletion_fio" class="form-control p-2 ps-3" type="text" style="border-radius: 10px"
                                name="reletion_fio[]" value="">
 
                         <label for="reletion_birth" class="mb-2 mt-3"><b>@lang('form.reletion_birth')</b></label>
-                        <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('reletion_birth') }}</span>
                         <input id="reletion_birth" class="form-control p-2 ps-3" type="text" style="border-radius: 10px"
                                name="reletion_birth[]" value="">
 
                         <label for="reletion_citizen" class="mb-2 mt-3"><b>@lang('form.reletion_citizen')</b></label>
-                        <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('reletion_citizen') }}</span>
                         <input id="reletion_citizen" class="form-control p-2 ps-3" type="text" style="border-radius: 10px"
                                name="reletion_citizen[]" value="">
 
                         <div>
                             <label for="file6" class="mb-2 mt-3"><b>@lang('form.reletion_passport_copy')</b></label>
-                            <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('file6') }}</span>
                             <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
                                    onclick="document.getElementById('file6').click();" />
                             <input type="file" style="display:none;" id="file6" name="file6[]" />
