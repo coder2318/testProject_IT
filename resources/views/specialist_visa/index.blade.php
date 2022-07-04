@@ -12,6 +12,7 @@
                                     <th>Страна</th>
                                     <th>Телефон номер</th>
                                     <th>Дополнительный номер телефона</th>
+                                    <th>Дата подачи заявки</th>
                                     <th>Действие</th>
                                 </tr>
                             </thead>
@@ -27,6 +28,9 @@
                                         </td>
                                         <td>
                                             {{ $specialist->additional_phone }}
+                                        </td>
+                                        <td>
+                                            {{ $specialist->updated_at }}
                                         </td>
                                         <td>
                                             <div class="inline-block">

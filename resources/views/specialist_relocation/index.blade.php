@@ -13,6 +13,7 @@
                                     <th>Навыки</th>
                                     <th>Телефон номер</th>
                                     <th>Город</th>
+                                    <th>Дата подачи заявки</th>
                                     <th>Действие</th>
                                 </tr>
                             </thead>
@@ -31,6 +32,9 @@
                                         </td>
                                         <td>
                                             {{ $specialist->city }}
+                                        </td>
+                                        <td>
+                                            {{ $specialist->updated_at }}
                                         </td>
                                         <td>
                                             <div class="inline-block">

@@ -13,6 +13,7 @@
                                     <th>Деятельность</th>
                                     <th>Телефон номер</th>
                                     <th>Эмайл</th>
+                                    <th>Дата подачи заявки</th>
                                     <th>Действие</th>
                                 </tr>
                             </thead>
@@ -31,6 +32,9 @@
                                         </td>
                                         <td>
                                             {{ $company->email }}
+                                        </td>
+                                        <td>
+                                            {{ $company->updated_at }}
                                         </td>
                                         <td>
                                             <div class="inline-block">

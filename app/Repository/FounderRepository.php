@@ -15,7 +15,7 @@ class FounderRepository extends BaseRepository
 
     public function index()
     {
-        return $this->entity->paginate(10);
+        return $this->entity->orderByDesc('id')->paginate(10);
     }
 
     public function store($params)
