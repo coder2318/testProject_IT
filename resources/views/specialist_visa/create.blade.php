@@ -70,6 +70,7 @@
                                 <b>@lang('form.one_photo')</b><br>
                                 @lang('form.photo_requirement')
                                 <br>
+                                @lang('form.background_white') <br>
                                 @lang('form.photo_month') <br>
                                 @lang('form.photo_color') <br>
                                 @lang('form.photo_size') <br>
