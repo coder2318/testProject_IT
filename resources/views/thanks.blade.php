@@ -9,7 +9,7 @@
                     <div class="" style="text-align: center; font-size: 24px; font-weight: bold">Спасибо! Ваша заявка принята</div>
                     <div class="mt-4" style="text-align: center; font-size: 20px;">Пожалуйста, дождитесь ответа</div>
                     <div class="mt-5" style="text-align: center; font-size: 24px; font-weight: bold">
-                        <a href="{{route('home')}}" class="btn btn-outline-success">Возвращаться домой</a>
+                        <a href="{{route('home')}}" class="btn btn-outline-success">Вернуться на главную</a>
                     </div>
                 </div>
             </div>

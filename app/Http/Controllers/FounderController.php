@@ -6,6 +6,8 @@ use App\Http\Requests\Founder\StoreRequest;
 use App\Http\Requests\Founder\UpdateRequest;
 use App\Services\FounderService;
 use App\Traits\FileUpload;
+use Illuminate\Http\Request;
+
 
 class FounderController extends Controller
 {
@@ -34,9 +36,10 @@ class FounderController extends Controller
         return view('founder.create');
     }
 
-    public function store(StoreRequest $request)
+    public function store(Request $request)
     {
-        $params = $request->validated();
+        // $params = $request->validated();
+        $params = $request->all();
         $params = $this->fileUpload($params, $request, 'founder');
         $this->service->create($params);
         return redirect()->route('thanks');
