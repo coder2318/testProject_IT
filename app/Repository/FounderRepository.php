@@ -33,7 +33,7 @@ class FounderRepository extends BaseRepository
                         'reletion_fio' => $params['reletion_fio'][$i],
                         'reletion_birth' => $params['reletion_birth'][$i],
                         'reletion_citizen' => $params['reletion_citizen'][$i],
-                        'file6' => $params['file6'][$i],
+                        'file6' => isset($params['file6'])?$params['file6'][$i] : '',
                         'investor_id' => null,
                         'specialist_id' => null,
                         'founder_id' => $id,
