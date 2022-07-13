@@ -55,7 +55,8 @@
                             <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('file4') }}</span>
                             <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
                                    onclick="document.getElementById('file4').click();" />
-                            <input type="file" style="display:none;" id="file4" name="file4" />
+                            <input type="file" style="display:none;" id="file4" name="file4" onchange="Filevalidation('file4')" />
+                            <p id="size"></p>
                             <label class=selected>@lang('form.no_choosen')</label>
                         </div>
 
@@ -64,7 +65,7 @@
                             <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('file5') }}</span>
                             <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
                                    onclick="document.getElementById('file5').click();" />
-                            <input type="file" style="display:none;" id="file5" name="file5" />
+                            <input type="file" style="display:none;" id="file5" name="file5" onchange="Filevalidation('file5')" />
                             <label class=selected>@lang('form.no_choosen')</label>
                             <br><i class="text-muted">
                                 <b>@lang('form.one_photo')</b><br>
@@ -130,7 +131,7 @@
                             <label for="file6" class="mb-2 mt-3"><b>@lang('form.reletion_passport_copy')</b></label>
                             <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
                                    onclick="document.getElementById('file6').click();" />
-                            <input type="file" style="display:none;" id="file6" name="file6[]" />
+                            <input type="file" style="display:none;" id="file6" name="file6[]" onchange="Filevalidation('file6')" />
                             <label class=selected>@lang('form.no_choosen')</label>
                         </div>
                         <div class="newElement"></div>
@@ -161,7 +162,7 @@
                             <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('file') }}</span>
                             <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
                                    onclick="document.getElementById('file').click();" />
-                            <input type="file" style="display:none;" id="file" name="file" />
+                            <input type="file" style="display:none;" id="file" name="file" onchange="Filevalidation('file')" />
                             <label class=selected>@lang('form.no_choosen')</label>
                         </div>
                         <div>
@@ -169,7 +170,7 @@
                             <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('file2') }}</span>
                             <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
                                    onclick="document.getElementById('file2').click();" />
-                            <input type="file" style="display:none;" id="file2" name="file2" />
+                            <input type="file" style="display:none;" id="file2" name="file2" onchange="Filevalidation('file2')" />
                             <label class=selected>@lang('form.no_choosen')</label>
                         </div>
                         <div>
@@ -177,7 +178,7 @@
                             <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('file3') }}</span>
                             <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
                                    onclick="document.getElementById('file3').click();" />
-                            <input type="file" style="display:none;" id="file3" name="file3" title="file3"/>
+                            <input type="file" style="display:none;" id="file3" name="file3" title="file3" onchange="Filevalidation('file3')"/>
                             <label class=selected>@lang('form.no_choosen')</label>
                         </div>
                         <label for="applicant_fio" class="mb-2 mt-3"><b>@lang('form.applicant_fio')</b></label>
@@ -266,9 +267,28 @@
         </div>
     </section>
 @endsection
+<script>
+
+    Filevalidation = (file_name) => {
+        const fi = document.getElementById(file_name);
+        // Check if any file is selected.
+        if (fi.files.length > 0) {
+            for (let i = 0; i <= fi.files.length - 1; i++) {
+
+                const fsize = fi.files.item(i).size;
+                const file = Math.round((fsize / 1024));
+                // The size of the file.
+                if (file >= 5096) {
+                    alert("Файл слишком большой, пожалуйста, выберите файл размером менее 5 МБ");
+                    fi.value = null
+                }
+            }
+        }
+    }
+
+</script>
 @push('script')
     <script>
-
 
         $(document).ready(function() {
             var filename3 = $('#lable').text();
