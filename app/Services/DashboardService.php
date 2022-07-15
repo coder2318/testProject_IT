@@ -55,7 +55,7 @@ class DashboardService
                 DB::raw("sum(case when status = 3 then 1 else 0 end) confirm_count"),
                 DB::raw("sum(case when status = 4 then 1 else 0 end) reject_count"),
             )
-            ->groupBy('user_id')
+            ->groupBy('user_id', 'users.fullname')
             ->get()->toArray();
 
         return [
