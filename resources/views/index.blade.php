@@ -334,22 +334,11 @@
         <section id="WhyUzbekistan">
             <div class="container">
 
-                <div class="section-title">
-                    <h2>@lang('main.Почему Узбекистан?')</h2>
-                </div>
-
                 <div class="row">
-                    <div class="col-md-4">
-                        <img src="{{ asset('img/Uzbekistan-3_0 1.png') }}" alt="">
-                    </div>
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="card heightFull">
                             <div class="row align-items-center heightFull">
-                                <div class="col-md-11 fs20 withFullBorder">@lang('main.Узбекистан, будучи')
-                                </div>
-                                <div class="col-md-1 text-center">
-                                    <img src="{{ asset('img/icons/like-shapes.svg') }}" alt="">
-                                </div>
+                                    <iframe width="50%" height="500px" style="margin: 0 auto" src="https://www.youtube.com/embed/bVVtmaf_maE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>

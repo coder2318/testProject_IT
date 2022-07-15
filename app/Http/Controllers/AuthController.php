@@ -16,7 +16,10 @@ class AuthController extends Controller
     {
         $credentials = $request->only('email', 'password');
             if (Auth::attempt($credentials)) {
-                return redirect()->route('company.index');
+                if(\auth()->user()->role == 'admin')
+                    return redirect()->route('company.index');
+                return redirect()->route('specialist-visa.index');
+
             }
             else {
                 return redirect()->back()->with('login_failed', '')->withInput();

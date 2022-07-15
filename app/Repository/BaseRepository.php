@@ -4,7 +4,7 @@ namespace App\Repository;
 
 class BaseRepository
 {
-    protected $entity;
+    public $entity;
 
     public function getQuery()
     {

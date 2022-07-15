@@ -2,8 +2,12 @@
 
 namespace App\Services;
 
+use App\Models\AncetaExpert;
+use App\Traits\ChangeStatusAncetaTrait;
+
 class BaseService
 {
+    use ChangeStatusAncetaTrait;
     /**
      * @var
      */
@@ -193,4 +197,28 @@ class BaseService
     {
         return $this->repo->destroy($id);
     }
+
+    public function changeStatus($params, $id)
+    {
+        $model = $this->changeStatusAnceta($params, $id);
+        if($model)
+            return true;
+        return false;
+    }
+
+    public function sendToExpert($params)
+    {
+        return $this->createAncetaExpert($params);
+    }
+
+    public function getAncetaExpert($id, $type)
+    {
+        return AncetaExpert::where('anceta_id', $id)->where('user_id', auth()->id())->where('type', $type)->first();
+    }
+
+    public function getAncetaExpertAnswers($id, $type)
+    {
+        return AncetaExpert::where('anceta_id', $id)->where('type', $type)->get();
+    }
+
 }

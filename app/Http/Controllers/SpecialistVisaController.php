@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Founder\UpdateRequest;
 use App\Http\Requests\SpecialistVisa\StoreRequest;
+use App\Models\AncetaExpert;
 use App\Services\SpecialistVisaService;
 use App\Traits\FileUpload;
+use Illuminate\Http\Request;
 
 class SpecialistVisaController extends Controller
 {
@@ -26,7 +28,9 @@ class SpecialistVisaController extends Controller
     public function show(int $id)
     {
         $specialist = $this->service->show($id);
-        return view('specialist_visa.show', compact('specialist'));
+        $anceta_expert = $this->service->getAncetaExpert($id, AncetaExpert::TYPE_VISA);
+        $experts = $this->service->getAncetaExpertAnswers($id, AncetaExpert::TYPE_VISA);
+        return view('specialist_visa.show', compact('specialist', 'anceta_expert', 'experts'));
     }
 
     public function create()
@@ -66,4 +70,29 @@ class SpecialistVisaController extends Controller
             dd($th);
         }
     }
+
+    public function sendToExpert($id)
+    {
+        $params['type'] = AncetaExpert::TYPE_VISA;
+        $params['anceta_id'] = $id;
+        $this->service->sendToExpert($params);
+        $this->service->update(['status' => AncetaExpert::STATUS_WAITING], $id);
+        return redirect()->route('specialist-visa.show', ['specialist' => $id]);
+    }
+
+    public function changeStatus(Request $request, int $id)
+    {
+        $params = $request->all();
+        if (password_verify($params['password'], \auth()->user()->password)) {
+            $params['type'] = AncetaExpert::TYPE_VISA;
+            $model = $this->service->changeStatus($params, $id);
+            if($model)
+                return redirect()->route('specialist-visa.show', ['specialist' => $id]);
+            return back()->withErrors('Не удалось изменить статус');
+
+        }
+        return back()->withErrors('Неверный пароль. Пожалуйста, проверьте и введите заново');
+
+    }
+
 }

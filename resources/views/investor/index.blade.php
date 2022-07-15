@@ -8,6 +8,7 @@
                         <table class="table table-bordered text-centet" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
+                                    <th>Номер заявки</th>
                                     <th>Имя</th>
                                     <th>Страна</th>
                                     <th>Телефон номер</th>
@@ -18,7 +19,8 @@
                             </thead>
                             <tbody>
                                 @foreach ($investors as $investor)
-                                    <tr id="Id{{ $investor->id }}">
+                                    <tr >
+                                        <td>{{ $investor->id }}</td>
                                         <td>{{ $investor->fio }}</td>
                                         <td>
                                             {{ $investor->citizen }}
@@ -42,18 +44,20 @@
                                                         class="text-primary"><i class="fas fa-eye"
                                                             aria-hidden="true"></i></a>
                                                 </span>
-                                                <span>
-                                                    <a href="{{ route('investor.edit', $investor->id) }}"
-                                                       class="text-success ml-2"><i class="fas fa-edit"
-                                                                                    aria-hidden="true"></i></a>
-                                                </span>
-                                                <button class="btn btn-danger mb-1"
-                                                        style="border: none; background-color:transparent;"
-                                                        onclick="return confirm('@lang('Ты хочешь удалить')');"
+                                                    @if(auth()->user()->role == 'admin')
+                                                        <span>
+                                                            <a href="{{ route('investor.edit', $investor->id) }}"
+                                                               class="text-success ml-2"><i class="fas fa-edit"
+                                                                                            aria-hidden="true"></i></a>
+                                                        </span>
+                                                        <button class="btn btn-danger mb-1"
+                                                                style="border: none; background-color:transparent;"
+                                                                onclick="return confirm('@lang('Ты хочешь удалить')');"
 
-                                                        title="@lang('Ты хочешь удалить')">
-                                                    <i class="fa fa-trash text-danger"></i>
-                                                </button>
+                                                                title="@lang('Ты хочешь удалить')">
+                                                            <i class="fa fa-trash text-danger"></i>
+                                                        </button>
+                                                    @endif
                                                 </form>
                                             </div>
                                         </td>

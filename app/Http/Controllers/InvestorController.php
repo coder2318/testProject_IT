@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Investor\UpdateRequest;
 use App\Http\Requests\Investor\StoreRequest;
+use App\Models\AncetaExpert;
 use App\Services\InvestorService;
 use App\Traits\FileUpload;
 use Illuminate\Http\Request;
@@ -27,7 +28,9 @@ class InvestorController extends Controller
     public function show(int $id)
     {
         $investor = $this->service->show($id);
-        return view('investor.show', compact('investor'));
+        $anceta_expert = $this->service->getAncetaExpert($id, AncetaExpert::TYPE_INVESTOR);
+        $experts = $this->service->getAncetaExpertAnswers($id, AncetaExpert::TYPE_INVESTOR);
+        return view('investor.show', compact('investor', 'anceta_expert', 'experts'));
     }
 
     public function create()
@@ -66,5 +69,29 @@ class InvestorController extends Controller
         } catch (\Throwable $th) {
             dd($th);
         }
+    }
+
+    public function sendToExpert($id)
+    {
+        $params['type'] = AncetaExpert::TYPE_INVESTOR;
+        $params['anceta_id'] = $id;
+        $this->service->sendToExpert($params);
+        $this->service->update(['status' => AncetaExpert::STATUS_WAITING], $id);
+        return redirect()->route('investor.show', ['investor' => $id]);
+    }
+
+    public function changeStatus(Request $request, int $id)
+    {
+        $params = $request->all();
+        if (password_verify($params['password'], \auth()->user()->password)) {
+            $params['type'] = AncetaExpert::TYPE_INVESTOR;
+            $model = $this->service->changeStatus($params, $id);
+            if($model)
+                return redirect()->route('investor.show', ['investor' => $id]);
+            return back()->withErrors('Не удалось изменить статус');
+
+        }
+        return back()->withErrors('Неверный пароль. Пожалуйста, проверьте и введите заново');
+
     }
 }

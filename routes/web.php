@@ -75,6 +75,8 @@ Route::get('admin/dashboard', [\App\Http\Controllers\HomeController::class, 'adm
         Route::get('/', [\App\Http\Controllers\SpecialistVisaController::class, 'index'])->name('specialist-visa.index');
         Route::get('show/{specialist}', [\App\Http\Controllers\SpecialistVisaController::class, 'show'])->name('specialist-visa.show');
         Route::post('delete/{company}', [\App\Http\Controllers\SpecialistVisaController::class, 'delete'])->name('specialist-visa.destroy');
+        Route::post('sendToExpert/{specialist}', [\App\Http\Controllers\SpecialistVisaController::class, 'sendToExpert'])->name('specialist.sendToExpert');
+        Route::post('change-status/{specialist}', [\App\Http\Controllers\SpecialistVisaController::class, 'changeStatus'])->name('specialist.change-status');
 
     });
 
@@ -84,6 +86,8 @@ Route::get('admin/dashboard', [\App\Http\Controllers\HomeController::class, 'adm
         Route::get('/', [\App\Http\Controllers\InvestorController::class, 'index'])->name('investor.index');
         Route::get('show/{investor}', [\App\Http\Controllers\InvestorController::class, 'show'])->name('investor.show');
         Route::post('delete/{investor}', [\App\Http\Controllers\InvestorController::class, 'delete'])->name('investor.destroy');
+        Route::post('sendToExpert/{investor}', [\App\Http\Controllers\InvestorController::class, 'sendToExpert'])->name('investor.sendToExpert');
+        Route::post('change-status/{investor}', [\App\Http\Controllers\InvestorController::class, 'changeStatus'])->name('investor.change-status');
 
     });
 Route::group(['prefix' => 'admin/application', 'middleware' => 'auth'], function () {
@@ -97,11 +101,17 @@ Route::group(['prefix' => 'admin/application', 'middleware' => 'auth'], function
 
 });
 
-    Route::group(['prefix' => 'admin/foundr', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin/foundr', 'middleware' => 'auth'], function () {
         Route::get('/edit/{founder}', [\App\Http\Controllers\FounderController::class, 'edit'])->name('founder.edit');
         Route::post('/update/{founder}', [\App\Http\Controllers\FounderController::class, 'update'])->name('founder.update');
         Route::get('/', [\App\Http\Controllers\FounderController::class, 'index'])->name('founder.index');
         Route::get('show/{founder}', [\App\Http\Controllers\FounderController::class, 'show'])->name('founder.show');
         Route::post('delete/{founder}', [\App\Http\Controllers\FounderController::class, 'delete'])->name('founder.destroy');
+        Route::post('sendToExpert/{founder}', [\App\Http\Controllers\FounderController::class, 'sendToExpert'])->name('founder.sendToExpert');
+        Route::post('change-status/{founder}', [\App\Http\Controllers\FounderController::class, 'changeStatus'])->name('founder.change-status');
+
+    });
+
+Route::group(['prefix' => 'admin/anceta-expert', 'middleware' => 'auth'], function () {
 
     });

@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Investor extends Model
 {
     use HasFactory;
+
+    const STATUS_DEFAULT = 1;
+    const STATUS_WAITING = 2;
+    const STATUS_CONFIRMED = 3;
+    const STATUS_REJECTED = 4;
+
     protected $fillable = [
         'fio',
         'date_birth',
@@ -29,11 +35,18 @@ class Investor extends Model
         'applicant_fio',
         'applicant_position',
         'applicant_phone_number',
-        'visa_date'
+        'visa_date',
+        'status',
+        'reject_reason'
     ];
 
     public function reletions()
     {
         return $this->hasMany(Reletion::class,  'investor_id', 'id');
+    }
+
+    public function scopeSent($query)
+    {
+        $query->where('status', '!=', self::STATUS_DEFAULT);
     }
 }

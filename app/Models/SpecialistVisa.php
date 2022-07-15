@@ -9,6 +9,11 @@ class SpecialistVisa extends Model
 {
     use HasFactory;
 
+    const STATUS_DEFAULT = 1;
+    const STATUS_WAITING = 2;
+    const STATUS_CONFIRMED = 3;
+    const STATUS_REJECTED = 4;
+
     protected $fillable = [
         'fio',
         'date_birth',
@@ -33,11 +38,17 @@ class SpecialistVisa extends Model
         'applicant_phone_number',
         'visa_date',
         'conditions',
-
+        'status',
+        'reject_reason'
     ];
 
     public function reletions()
     {
         return $this->hasMany(Reletion::class,  'specialist_id', 'id');
+    }
+
+    public function scopeSent($query)
+    {
+        $query->where('status', '!=', self::STATUS_DEFAULT);
     }
 }
