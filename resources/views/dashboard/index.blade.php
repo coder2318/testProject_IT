@@ -76,7 +76,7 @@
                                 $updated = explode(',', $investor->updated);
                             @endphp
                             <tr >
-                                <td>{{ $investor->anceta_id }}</td>
+                                <td><a href="{{route('investor.show', ['investor' => $investor->anceta_id])}}">{{ $investor->anceta_id }}</a></td>
                                 <td>
                                 Инвесторы
                                 </td>
@@ -113,7 +113,7 @@
                                 $updated = explode(',', $founder->updated);
                             @endphp
                             <tr >
-                                <td>{{ $founder->anceta_id }}</td>
+                                <td><a href="{{route('founder.show', ['founder' => $founder->anceta_id])}}">{{ $founder->anceta_id}}</a></td>
                                 <td>
                                     Учредители резидентов IT Park
                                 </td>
@@ -150,9 +150,9 @@
                                 $updated = explode(',', $visa->updated);
                             @endphp
                             <tr >
-                                <td>{{ $visa->anceta_id }}</td>
+                                <td><a href="{{route('specialist-visa.show', ['specialist' => $visa->anceta_id])}}">{{ $visa->anceta_id}}</a></td>
                                 <td>
-                                    Учредители резидентов IT Park
+                                    IT-специалист виза
                                 </td>
                                 <td>{{ date_format(date_create($visa->visa->created_at), 'Y-m-d') }}</td>
                                 <td>{{ date_format(date_create($visa->visa->updated_at), 'Y-m-d') }}</td>
