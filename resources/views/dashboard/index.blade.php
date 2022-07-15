@@ -80,8 +80,8 @@
                                 <td>
                                 Инвесторы
                                 </td>
-                                <td>{{ $investor->investor->created_at }}</td>
-                                <td>{{ $investor->investor->updated_at }}</td>
+                                <td>{{ date_format(date_create($investor->investor->created_at), 'Y-m-d') }}</td>
+                                <td>{{ date_format(date_create($investor->investor->updated_at), 'Y-m-d') }}</td>
                             @foreach($status as $index=>$stat)
                                     @php
                                         switch ($stat){
