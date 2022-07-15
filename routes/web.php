@@ -49,6 +49,10 @@ Route::get('admin/dashboard', [\App\Http\Controllers\HomeController::class, 'adm
     Route::post('/', [AuthController::class, 'logout'])->name('admin.logout');
     Route::get('/admin', [AuthController::class, 'index'])->name('admin.index');
 
+    Route::group(['prefix' => 'admin/dashboard', 'middleware' => 'auth'], function () {
+        Route::get('/index', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
+    });
+
 
     Route::group(['prefix' => 'admin/company', 'middleware' => 'auth'], function () {
         Route::get('/edit/{company}', [\App\Http\Controllers\CompanyController::class, 'edit'])->name('company.edit');

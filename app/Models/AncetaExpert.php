@@ -30,4 +30,17 @@ class AncetaExpert extends Model
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+
+    public function investor(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Investor::class, 'anceta_id', 'id');
+    }
+    public function founder(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Founder::class, 'anceta_id', 'id');
+    }
+    public function visa(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(SpecialistVisa::class, 'anceta_id', 'id');
+    }
 }
