@@ -30,11 +30,11 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendorNew/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendorNew/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendorNew/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendorNew/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendorNew/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -533,12 +533,12 @@
 
 
     <!-- Vendor JS Files -->
-    <script src="{{ asset('vendor/purecounter/purecounter.js') }}"></script>
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('vendorNew/purecounter/purecounter.js') }}"></script>
+    <script src="{{ asset('vendorNew/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('vendorNew/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('vendorNew/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('vendorNew/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('vendorNew/php-email-form/validate.js') }}"></script>
 
     <!-- Template Main JS File -->
     <script src="{{ asset('js/main.js') }}"></script>
