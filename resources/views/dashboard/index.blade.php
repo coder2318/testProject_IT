@@ -117,8 +117,8 @@
                                 <td>
                                     Учредители резидентов IT Park
                                 </td>
-                                <td>{{ $founder->founder->created_at }}</td>
-                                <td>{{ $founder->founder->updated_at }}</td>
+                                <td>{{ date_format(date_create($founder->founder->created_at), 'Y-m-d') }} </td>
+                                <td>{{ date_format(date_create($founder->founder->updated_at), 'Y-m-d') }} </td>
                                 @foreach($status as $index=>$stat)
                                     @php
                                         switch ($stat){
@@ -154,8 +154,8 @@
                                 <td>
                                     Учредители резидентов IT Park
                                 </td>
-                                <td>{{ $visa->visa->created_at }}</td>
-                                <td>{{ $visa->visa->updated_at }}</td>
+                                <td>{{ date_format(date_create($visa->visa->created_at), 'Y-m-d') }}</td>
+                                <td>{{ date_format(date_create($visa->visa->updated_at), 'Y-m-d') }}</td>
                                 @foreach($status as $index=>$stat)
                                     @php
                                         switch ($stat){
