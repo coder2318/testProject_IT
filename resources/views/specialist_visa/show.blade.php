@@ -108,33 +108,33 @@
                     <th>Контактный номер ходатайствующего лица</th>
                     <td>{{ $specialist->applicant_phone_number }}</td>
                 </tr>
-                @php
-                    if(auth()->user()->role =='expert')
-                        $model = $anceta_expert;
-                    else
-                        $model = $specialist;
-                        switch ($model->status){
-                            case 2:
-                                $color = 'darkorange';
-                                $status = 'На рассмотрении';
-                                break;
-                            case 3:
-                                $color = 'green';
-                                $status = 'Согласовал';
-                                break;
-                            case 4:
-                                $color = 'red';
-                                $status = 'Отклонил';
-                                break;
-                            default:
-                                $color = 'mediumvioletred';
-                                $status = 'Созданный';
-                        }
-                @endphp
-                <tr style="color: {{$color}}">
-                    <th>Статус</th>
-                    <td>{{ $status }}</td>
-                </tr>
+{{--                @php--}}
+{{--                    if(auth()->user()->role =='expert')--}}
+{{--                        $model = $anceta_expert;--}}
+{{--                    else--}}
+{{--                        $model = $specialist;--}}
+{{--                        switch ($model->status){--}}
+{{--                            case 2:--}}
+{{--                                $color = 'darkorange';--}}
+{{--                                $status = 'На рассмотрении';--}}
+{{--                                break;--}}
+{{--                            case 3:--}}
+{{--                                $color = 'green';--}}
+{{--                                $status = 'Согласовал';--}}
+{{--                                break;--}}
+{{--                            case 4:--}}
+{{--                                $color = 'red';--}}
+{{--                                $status = 'Отклонил';--}}
+{{--                                break;--}}
+{{--                            default:--}}
+{{--                                $color = 'mediumvioletred';--}}
+{{--                                $status = 'Созданный';--}}
+{{--                        }--}}
+{{--                @endphp--}}
+{{--                <tr style="color: {{$color}}">--}}
+{{--                    <th>Статус</th>--}}
+{{--                    <td>{{ $status }}</td>--}}
+{{--                </tr>--}}
                 </tbody>
             </table>
             @if(!$specialist->reletions->isEmpty())

@@ -83,33 +83,33 @@
                     <td><a href="{{ asset("$founder->file2") }}" target="_blank">Загрузка</a>
                     </td>
                 </tr>
-                @php
-                if(auth()->user()->role =='expert')
-                    $model = $anceta_expert;
-                else
-                    $model = $founder;
-                    switch ($model->status){
-                        case 2:
-                            $color = 'darkorange';
-                            $status = 'На рассмотрении';
-                            break;
-                        case 3:
-                            $color = 'green';
-                            $status = 'Согласовал';
-                            break;
-                        case 4:
-                            $color = 'red';
-                            $status = 'Отклонил';
-                            break;
-                        default:
-                            $color = 'mediumvioletred';
-                            $status = 'Созданный';
-                    }
-                @endphp
-                <tr style="color: {{$color}}">
-                    <th>Статус</th>
-                    <td>{{ $status }}</td>
-                </tr>
+{{--                @php--}}
+{{--                if(auth()->user()->role =='expert')--}}
+{{--                    $model = $anceta_expert;--}}
+{{--                else--}}
+{{--                    $model = $founder;--}}
+{{--                    switch ($model->status){--}}
+{{--                        case 2:--}}
+{{--                            $color = 'darkorange';--}}
+{{--                            $status = 'На рассмотрении';--}}
+{{--                            break;--}}
+{{--                        case 3:--}}
+{{--                            $color = 'green';--}}
+{{--                            $status = 'Согласовал';--}}
+{{--                            break;--}}
+{{--                        case 4:--}}
+{{--                            $color = 'red';--}}
+{{--                            $status = 'Отклонил';--}}
+{{--                            break;--}}
+{{--                        default:--}}
+{{--                            $color = 'mediumvioletred';--}}
+{{--                            $status = 'Созданный';--}}
+{{--                    }--}}
+{{--                @endphp--}}
+{{--                <tr style="color: {{$color}}">--}}
+{{--                    <th>Статус</th>--}}
+{{--                    <td>{{ $status }}</td>--}}
+{{--                </tr>--}}
                 </tbody>
             </table>
             @if(!$founder->reletions->isEmpty())
