@@ -87,10 +87,10 @@
                     <div class="col-md-4">
                         <div class="shadow-box rounded">
                             <div class="shadow-box-ico">
-                                <img src="{{ asset('img/icons/home.svg') }}" alt="">
+                                <img src="{{ asset('img/icons/check.svg') }}" alt="" width="20%">
                             </div>
-                            <div class="shadow-box-text">@lang('main.Упрощенный порядок')<br> @lang('main.получения')
-                                <b>@lang('main.ВНЖ')</b>
+                            <br>
+                            <div class="shadow-box-text">@lang('Покупка недвижимости любой стоимости на территории РУз')
                             </div>
                         </div>
                     </div>

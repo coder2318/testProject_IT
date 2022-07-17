@@ -52,7 +52,7 @@
                     <a href="{{ route('specialist-visa.index') }}" class="nav-link  ">
                         <i class="nav-icon fas fa-id-card-alt"></i>
                         <p>
-                            IT-специалист виза
+                            IT-специалист
                         </p>
                     </a>
                 </li>
@@ -60,7 +60,7 @@
                     <a href="{{ route('investor.index') }}" class="nav-link  ">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
-                            Инвестори
+                            Инвесторы
                         </p>
                     </a>
                 </li>

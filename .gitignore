@@ -5,6 +5,8 @@
 /public/investor
 /public/founder
 /public/files
+/public/vendor
+/public/vendorNew
 /public/qr-code
 /public/specialist-visa
 /storage/*.key
