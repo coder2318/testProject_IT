@@ -277,16 +277,9 @@ return [
     "Другая информация, которую вы считаете полезной" => "Other information you find useful",
     "IT-специалисты" => "IT professionals",
     "Какие обязанности у резидента IT Park?" => "What are the responsibilities of an IT park resident?",
-    "Копия паспорта работодателя" => "A copy of the employer's passport."
-
-
-
-
-
-
-
-
-    
-
+    "Копия паспорта работодателя" => "A copy of the employer's passport.",
+    "Новости" => "News",
+    "Historic Silk Road Sites, Uzbekistan Walking an ancient path" => 'Historic Silk Road Sites, Uzbekistan Walking an ancient path',
+    "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan" => "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan"
 
 ];

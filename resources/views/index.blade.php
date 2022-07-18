@@ -426,7 +426,6 @@
             </div>
         </section>
 
-
         <section id="reviews">
             <div class="container">
 
@@ -551,6 +550,33 @@
                         </div>
                     </div>
                 </div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>@lang('main.Новости')</h2>
+                </div>
+
+                <div class="row mb-5" >
+                    <div class="col-md-6" style="margin: 0 auto" >
+                        <div class="card card-sm card-hover">
+                            <div class="card-image" style="background-image: url('https://api.time.com/wp-content/uploads/2022/07/Worlds-Greatest-Places-2022-SilkRoadUzbekistan.jpeg')">
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="card-title"><a href="https://time.com/collection/worlds-greatest-places-2022/6194617/historic-silk-road-sites-uzbekistan/">@lang("main.Historic Silk Road Sites, Uzbekistan Walking an ancient path")</a></div>
+                                <div class="text-muted fs20">TIME: @lang("main.WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan")</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
 
             </div>
         </section>
