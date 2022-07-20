@@ -282,5 +282,6 @@ return [
     "Копия паспорта работодателя" => "Копия паспорта работодателя",
     "Новости" => "Новости",
     "Historic Silk Road Sites, Uzbekistan Walking an ancient path"  => 'Исторические места Шелкового пути, Узбекистан Прогулка по древней тропе',
-    "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan" => "САМЫЕ ВЕЛИКИЕ МЕСТА МИРА 2022. Медресе Тиля-Кори в Самарканде, на Шелковом пути, Узбекистан"
+    "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan" => "САМЫЕ ВЕЛИКИЕ МЕСТА МИРА 2022. Медресе Тиля-Кори в Самарканде, на Шелковом пути, Узбекистан",
+    "Поиск работодателя" => "Поиск работодателя"
 ];

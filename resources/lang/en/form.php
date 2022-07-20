@@ -29,7 +29,7 @@ return [
     "adress_specialist" => "Employer's address",
     "phone_specialist" => "Employer phone number",
 
-    'company_name' => 'Name of the legal entity - employer:',
+    'company_name' => 'Name of the legal entity:',
     "adress_and_phone" => "Employer adress and phone number",
     "income_year" => "A document confirming annual income for the last 12 months from the date of application in the amount of at least the equivalent of 30 thousand US dollars, confirmed by the bank or the relevant authorized body:",
     "diplom" => "A document (diploma, certificate or otherwise) confirming the applicant's specialization and qualification in the field of information technology:",
@@ -101,5 +101,6 @@ return [
     "income_last" => "Information on income for the last 12 months (with an attachment of confirming documents)",
     "income_plan" => "Petition letter on applicant’s employment by a resident company of Uzbekistan (arbitrary form)",
     "save" => "Save",
-    "upload" => "Select a file"
+    "upload" => "Select a file",
+    "sertificate" => "Certificate of residency in IT Park"
 ];

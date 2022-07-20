@@ -140,7 +140,6 @@
                     </div>
                 </div>
 
-                <div class="text-muted text-center mt-4 fs18"><em>@lang('main.*Для членов семьи')</em></div>
 
             </div>
         </section>
@@ -265,6 +264,7 @@
                                     <div class="list-1-item-text">@lang('main.Поиск и аренда офиса')</div>
                                 </li>
                             </ul>
+                            <br><br>
 
                             <a href="{{ route('company.create') }}" class="btn btn-success">@lang('main.Подать')</a>
 
@@ -306,6 +306,12 @@
                                         <img src="{{ asset('img/icons/check.svg') }}" alt="">
                                     </div>
                                     <div class="list-1-item-text">@lang('main.Оформление документов')</div>
+                                </li>
+                                <li>
+                                    <div class="list-1-item-ico">
+                                        <img src="{{ asset('img/icons/check.svg') }}" alt="">
+                                    </div>
+                                    <div class="list-1-item-text">@lang('main.Поиск работодателя')</div>
                                 </li>
                             </ul>
 
@@ -1118,7 +1124,6 @@
         </section>
 
 
-        <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact section-bg">
             <div class="container">
 

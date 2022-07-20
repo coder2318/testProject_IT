@@ -280,6 +280,8 @@ return [
     "Копия паспорта работодателя" => "A copy of the employer's passport.",
     "Новости" => "News",
     "Historic Silk Road Sites, Uzbekistan Walking an ancient path" => 'Historic Silk Road Sites, Uzbekistan Walking an ancient path',
-    "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan" => "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan"
+    "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan" => "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan",
+    "Поиск работодателя" => "Employer search"
+
 
 ];
