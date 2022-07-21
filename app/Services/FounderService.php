@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\AncetaExpert;
+use App\Models\Reletion;
 use App\Repository\FounderRepository;
 
 class FounderService extends BaseService

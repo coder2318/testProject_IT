@@ -42,9 +42,10 @@
                     <th>Фото</th>
                     <td><a href="{{ asset("$founder->file5") }}" target="_blank">Загрузка</a></td>
                 </tr>
-                <tr>
-                    <th>Сертификат резидентсва</th>
-                    <td><a href="{{ asset("$founder->file2") }}" target="_blank">Загрузка</a></td>
+{{--                <tr>--}}
+{{--                    <th>Сертификат резидентсва</th>--}}
+{{--                    <td><a href="{{ asset("$founder->file2") }}" target="_blank">Загрузка</a></td>--}}
+{{--                </tr>--}}
                 <tr>
                     <th>Срок действия IT-виза</th>
                     <td>{{ $founder->visa_date }}</td>

@@ -533,13 +533,14 @@
 
 
     <!-- Vendor JS Files -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="{{ asset('vendorNew/purecounter/purecounter.js') }}"></script>
     <script src="{{ asset('vendorNew/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('vendorNew/glightbox/js/glightbox.min.js') }}"></script>
     <script src="{{ asset('vendorNew/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('vendorNew/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('vendorNew/php-email-form/validate.js') }}"></script>
-
     <!-- Template Main JS File -->
     <script src="{{ asset('js/main.js') }}"></script>
     <!-- Yandex.Metrika counter -->
