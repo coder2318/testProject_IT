@@ -26,31 +26,35 @@
         <section id="clients" class="clients section-bg">
             <div class="container">
 
-                <div class="row">
+                <div class="row" >
 
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="{{ asset('img/logos/epam.svg') }}" class="img-fluid" alt="">
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="{{ asset('img/logos/exadel.svg') }}" class="img-fluid" alt="">
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="{{ asset('img/logos/iTechArt.png') }}" class="img-fluid" alt="">
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="{{ asset('img/logos/LGCNS.png') }}" class="img-fluid" alt="">
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="{{ asset('img/logos/selectel.png') }}" class="img-fluid" alt="">
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="{{ asset('img/logos/UZINFOCOM_logo.png') }}" class="img-fluid" alt=""
                             style="max-width: 60%;">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{{ asset('img/logos/img.png') }}" class="img-fluid" alt=""
+                             style="max-width: 60%;">
                     </div>
 
                 </div>
@@ -66,17 +70,17 @@
                 </div>
 
                 <div class="row img-boxes">
-                    <div class="col-md-4">
-                        <div class="shadow-box rounded">
-                            <div class="shadow-box-ico">
-                                <img src="{{ asset('img/icons/airplane.svg') }}" alt="">
-                            </div>
-                            <div class="shadow-box-text">@lang('main.Беспрепятственный') <br> @lang('main.въезд и') <br>
-                                @lang('main.в Узбекистане')
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
+{{--                    <div class="col-md-4">--}}
+{{--                        <div class="shadow-box rounded">--}}
+{{--                            <div class="shadow-box-ico">--}}
+{{--                                <img src="{{ asset('img/icons/airplane.svg') }}" alt="">--}}
+{{--                            </div>--}}
+{{--                            <div class="shadow-box-text">@lang('main.Беспрепятственный') <br> @lang('main.въезд и') <br>--}}
+{{--                                @lang('main.в Узбекистане')--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+                    <div class="col-md-6">
                         <div class="shadow-box rounded">
                             <div class="shadow-box-ico">
                                 <img src="{{ asset('img/icons/document-text.svg') }}" alt="">
@@ -84,7 +88,7 @@
                             <div class="shadow-box-text">@lang('main.Равные социальные')<br>@lang('main.условия с')</div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="shadow-box rounded">
                             <div class="shadow-box-ico">
                                 <img src="{{ asset('img/icons/check.svg') }}" alt="" width="20%">
@@ -432,6 +436,17 @@
             </div>
         </section>
 
+        <section>
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>@lang('main.НО САМОЕ ГЛАВНОЕ ,')<br>@lang('main.УЗБЕКИСТАН - КУЗНИЦА') <span
+                            class="txt-success">@lang('main.IT-ТАЛАНТОВ')</span></h2>
+                </div>
+
+            </div>
+        </section>
+
         <section id="reviews">
             <div class="container">
 
@@ -633,29 +648,6 @@
                                 </div>
                             </li>
 
-                            <li data-aos="fade-up" class="hide">
-                                <a data-bs-toggle="collapse" class="collapse collapse-toggle collapsed"
-                                    data-bs-target="#faq-list-17">
-                                    @lang('main.Порядок получения IT-Visa')
-                                    <span class="collapse-toggle-icon">
-                                        <img src="{{ asset('img/icons/plus.svg') }}" class="icon-show" alt="">
-                                        <img src="{{ asset('img/icons/minus.svg') }}" class="icon-close" alt="">
-                                    </span>
-                                </a>
-                                <div id="faq-list-17" class="collapse collapse-body" data-bs-parent=".faq-list">
-                                    <p>@lang('main.Соискатели предоставляют:')</p>
-                                    <ul>
-                                        <li>@lang('main.резюме о своей деятельности;')</li>
-                                        <li>@lang('main.информацию о планируемых проектах в Узбекистане (для инвесторов);')
-                                        </li>
-                                        <li>@lang('main.информацию о доходах')</li>
-                                        <li>@lang('main.документы, подтверждающие')</li>
-                                    </ul>
-                                    <p>@lang('main.На основе вышеуказанных')</p>
-                                    <p>@lang('main.В консульские учреждения')</p>
-                                    <p>@lang('main.IT-Visa – выдается в трехдневный срок.')</p>
-                                </div>
-                            </li>
 
                             <li data-aos="fade-up" class="hide">
                                 <a data-bs-toggle="collapse" class="collapse collapse-toggle collapsed"
@@ -677,9 +669,6 @@
                                                 href="https://it-market.uz/" target="_blank">(https://it-market.uz/)</a>
                                         </li>
                                     </ul>
-                                    <p>
-                                        <b>@lang('main.IT-Visa')</b>@lang('–это многократная виза')
-                                    </p>
                                 </div>
                             </li>
 
@@ -1015,7 +1004,7 @@
                             <li data-aos="fade-up" class="hide">
                                 <a data-bs-toggle="collapse" class="collapse collapse-toggle collapsed"
                                     data-bs-target="#faq-list-17">
-                                    @lang('main.Как трудоустроится в Узбекистане?')
+                                    @lang('main.Как трудоустроиться в Узбекистане?')
                                     <span class="collapse-toggle-icon">
                                         <img src="{{ asset('img/icons/plus.svg') }}" class="icon-show" alt="">
                                         <img src="{{ asset('img/icons/minus.svg') }}" class="icon-close" alt="">
@@ -1112,16 +1101,7 @@
             </section>
         </section>
 
-        <section>
-            <div class="container">
 
-                <div class="section-title">
-                    <h2>@lang('main.НО САМОЕ ГЛАВНОЕ ,')<br>@lang('main.УЗБЕКИСТАН - КУЗНИЦА') <span
-                            class="txt-success">@lang('main.IT-ТАЛАНТОВ')</span></h2>
-                </div>
-
-            </div>
-        </section>
 
 
         <section id="contact" class="contact section-bg">
