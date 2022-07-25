@@ -283,5 +283,8 @@ return [
     "Новости" => "Новости",
     "Historic Silk Road Sites, Uzbekistan Walking an ancient path"  => 'Исторические места Шелкового пути, Узбекистан Прогулка по древней тропе',
     "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan" => "САМЫЕ ВЕЛИКИЕ МЕСТА МИРА 2022. Медресе Тиля-Кори в Самарканде, на Шелковом пути, Узбекистан",
-    "Поиск работодателя" => "Поиск работодателя"
+    "Поиск работодателя" => "Поиск работодателя",
+        "Информация об IT Visa и IT Card" => "Информация об IT Visa и IT Card",
+    "Разница между IT-Visa и IT Card" => "Разница между IT-Visa и IT Card",
+    "Скачать буклет" => "Скачать буклет"
 ];

@@ -148,6 +148,47 @@
             </div>
         </section>
 
+        <section id="WhoCanGet">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>@lang('main.Информация об IT Visa и IT Card')</h2>
+                </div>
+
+                <div class="shadow-box p-0">
+                    <div class="row">
+                        <div class="col-md-6 withSmBorder">
+                            <div class="p-5">
+                                <div class="shadow-box-ico">
+                                    <img src="{{ asset('img/icons/document-text.svg') }}" alt="">
+                                </div>
+                                <div class="shadow-box-text mb-4">@lang('main.Информация об IT Visa и IT Card')</div>
+                                <a href="{{ asset('files/brouchure.pdf') }}" class="btn btn-success"
+                                   target="_blank">@lang('main.Скачать буклет')
+                                    <img class="ms-3" src="{{ asset('img/icons/document-download.svg') }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="p-5">
+                                <div class="shadow-box-ico">
+                                    <img src="{{ asset('img/icons/document-text.svg') }}" alt="">
+                                </div>
+                                <div class="shadow-box-text mb-4">@lang('main.Разница между IT-Visa и IT Card')
+                                </div>
+                                    <a href="{{ asset('files/presamalya_organized (3)_organized.pdf') }}" class="btn btn-success"
+                                       target="_blank">@lang('main.Скачать буклет')
+                                        <img class="ms-3" src="{{ asset('img/icons/document-download.svg') }}" alt="">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
 
         <section id="privileges">
             <div class="container">
@@ -1120,7 +1161,7 @@
                                 <div class="info-box heightFull">
                                     <img src="{{ asset('img/icons/sms.svg') }}" alt="">
                                     <h3>Email</h3>
-                                    <a href="mailto:itvisa@it-park.uz"><span class="text-muted">itvisa@it-park.uz</span></a>
+                                    <a href="mailto:itvisauz@gmail.com"><span class="text-muted">itvisauz@gmail.com</span></a>
                                 </div>
                             </div>
                             <div class="col-md-6">

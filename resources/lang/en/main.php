@@ -281,7 +281,13 @@ return [
     "Новости" => "News",
     "Historic Silk Road Sites, Uzbekistan Walking an ancient path" => 'Historic Silk Road Sites, Uzbekistan Walking an ancient path',
     "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan" => "WORLD'S GREATEST PLACES 2022. Tilya-Kori Madrasa in the Silk Road city of Samarkand, Uzbekistan",
-    "Поиск работодателя" => "Employer search"
+    "Поиск работодателя" => "Employer search",
+    "Информация об IT Visa и IT Card" => "Information about IT Visa and IT Card",
+    "Разница между IT-Visa и IT Card" => "Difference between IT Visa and IT Card",
+    "Скачать буклет" => "Download booklet"
+
+
+
 
 
 ];
