@@ -245,9 +245,6 @@
                 '</div>').insertBefore("#addElement");
         })
     </script>
-@endsection
-
-@push('script')
     <script>
 
 
@@ -262,4 +259,4 @@
         });
 
     </script>
-@endpush
+@endsection

@@ -40,10 +40,10 @@ class FounderController extends Controller
         return view('founder.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        // $params = $request->validated();
-        $params = $request->all();
+         $params = $request->validated();
+//        $params = $request->all();
         $params = $this->fileUpload($params, $request, 'founder');
         $this->service->create($params);
         return redirect()->route('thanks');

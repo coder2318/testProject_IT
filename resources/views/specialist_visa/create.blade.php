@@ -288,7 +288,17 @@
                 '<label class=selected>@lang('form.no_choosen')</label>' +
                 '</div>').insertBefore("#addElement");
 
-        })
+        });
+
+        $(document).ready(function() {
+            var filename3 = $('#lable').text();
+            $(document).delegate("input:file", "change", function() {
+                console.log($(this).parent().find('.selected').html(filename3));
+            });
+
+            $('textarea').val($('textarea').val().trim());
+
+        });
     </script>
 @endsection
 <script>
@@ -310,19 +320,5 @@
         }
     }
 
+
 </script>
-@push('script')
-    <script>
-
-        $(document).ready(function() {
-            var filename3 = $('#lable').text();
-            $(document).delegate("input:file", "change", function() {
-                console.log($(this).parent().find('.selected').html(filename3));
-            });
-
-            $('textarea').val($('textarea').val().trim());
-
-        });
-
-    </script>
-@endpush

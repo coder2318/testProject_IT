@@ -52,19 +52,19 @@
                         <div>
                             <label for="file4" class="mb-2 mt-3"><b>@lang('form.passport_copy')</b></label>
                             <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('file4') }}</span>
-{{--                            <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"--}}
-{{--                                   onclick="document.getElementById('file4').click();" />--}}
-                            <input type="file"  id="file4" name="file4" />
-{{--                            <label class=selected>@lang('form.no_choosen')</label>--}}
+                            <input type="button" id="loadFileXml" value="{{ __('form.upload') }}"
+                                   onclick="document.getElementById('file4').click();" />
+                            <input type="file" style="display: none" id="file4" name="file4" />
+                            <label class=selected>@lang('form.no_choosen')</label>
                         </div>
 
                         <div>
                             <label for="file5" class="mb-2 mt-3"><b>@lang('form.photo')</b></label>
                             <span style="color: #b02a37; font-weight: bold">* {{ $errors->first('file5') }}</span>
-{{--                            <input type="button" id="photo" value="{{ __('form.upload') }}"--}}
-{{--                                   onclick="document.getElementById('file5').click();" />--}}
-                            <input type="file"  id="file5" name="file5" />
-{{--                            <label class=selected>@lang('form.no_choosen')</label>--}}
+                            <input type="button" id="photo" value="{{ __('form.upload') }}"
+                                   onclick="document.getElementById('file5').click();" />
+                            <input type="file" style="display: none" id="file5" name="file5" />
+                            <label class=selected>@lang('form.no_choosen')</label>
                             <br><i class="text-muted">
                                 <b>@lang('form.one_photo')</b><br>
                                 @lang('form.photo_requirement')
@@ -289,8 +289,6 @@
 
         })
     </script>
-@endsection
-@push('script')
     <script>
         $(document).ready(function() {
             var filename3 = $('#lable').text();
@@ -302,4 +300,4 @@
         });
 
     </script>
-@endpush
+@endsection

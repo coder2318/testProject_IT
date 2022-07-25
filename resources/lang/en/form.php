@@ -2,6 +2,7 @@
 
 return [
     "no_choosen" => "File not selected",
+    "choosen" => "File selected",
     "fio" => "Full Name",
     "date_birth" => "Date of birth (day-month-year)",
     "sex" => "Sex",
