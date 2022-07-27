@@ -16,6 +16,7 @@ class Company extends Model
         'count_staffs',
         'phone',
         'other',
-        'email'
+        'email',
+        'is_showed'
     ];
 }

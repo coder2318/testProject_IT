@@ -18,6 +18,7 @@ class SpecialistRelocation extends Model
         'contact_number',
         'city',
         'employment',
-        'file'
+        'file',
+        'is_showed'
     ];
 }

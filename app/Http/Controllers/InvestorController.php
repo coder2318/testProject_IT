@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\DeleteAncetaExpertEvent;
 use App\Http\Requests\Investor\UpdateRequest;
 use App\Http\Requests\Investor\StoreRequest;
 use App\Models\AncetaExpert;
@@ -28,6 +29,9 @@ class InvestorController extends Controller
     public function show(int $id)
     {
         $investor = $this->service->show($id);
+        $investor->update([
+            'is_showed' => true
+        ]);
         $anceta_expert = $this->service->getAncetaExpert($id, AncetaExpert::TYPE_INVESTOR);
         $experts = $this->service->getAncetaExpertAnswers($id, AncetaExpert::TYPE_INVESTOR);
         return view('investor.show', compact('investor', 'anceta_expert', 'experts'));
@@ -65,6 +69,7 @@ class InvestorController extends Controller
     {
         try {
             $this->service->delete($id);
+            event(new DeleteAncetaExpertEvent(AncetaExpert::TYPE_INVESTOR, $id));
             return redirect()->route('investor.index');
         } catch (\Throwable $th) {
             dd($th);

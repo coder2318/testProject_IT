@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\DeleteAncetaExpertEvent;
 use App\Http\Requests\Founder\StoreRequest;
 use App\Http\Requests\Founder\UpdateRequest;
 use App\Models\AncetaExpert;
@@ -30,6 +31,9 @@ class FounderController extends Controller
     public function show(int $id)
     {
         $founder = $this->service->show($id);
+        $founder->update([
+            'is_showed' => true
+        ]);
         $anceta_expert = $this->service->getAncetaExpert($id, AncetaExpert::TYPE_FOUNDER);
         $experts = $this->service->getAncetaExpertAnswers($id, AncetaExpert::TYPE_FOUNDER);
         return view('founder.show', compact('founder', 'anceta_expert', 'experts'));
@@ -67,6 +71,7 @@ class FounderController extends Controller
     {
         try {
             $this->service->delete($id);
+            event(new DeleteAncetaExpertEvent(AncetaExpert::TYPE_FOUNDER, $id));
             return redirect()->route('founder.index');
         } catch (\Throwable $th) {
             dd($th);

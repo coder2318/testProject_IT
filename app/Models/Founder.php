@@ -32,7 +32,8 @@ class Founder extends Model
         'visa_date',
         'file2',
         'status',
-        'reject_reason'
+        'reject_reason',
+        'is_showed'
     ];
 
     public function reletions()

@@ -37,7 +37,8 @@ class Investor extends Model
         'applicant_phone_number',
         'visa_date',
         'status',
-        'reject_reason'
+        'reject_reason',
+        'is_showed'
     ];
 
     public function reletions()

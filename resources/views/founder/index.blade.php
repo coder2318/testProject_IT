@@ -57,7 +57,17 @@
                                                                     title="@lang('Ты хочешь удалить')">
                                                                 <i class="fa fa-trash text-danger"></i>
                                                             </button>
+                                                        <span>
+                                                            <a href="#" class="text-primary">
+                                                                @if($founder->is_showed)
+                                                                    <i class="fa-solid fa-circle-check"   aria-hidden="true"></i>
+                                                                @else
+                                                                    <i class="fa-regular fa-circle-check"   aria-hidden="true"></i>
+                                                                @endif
+                                                            </a>
+                                                        </span>
                                                     @endif
+
                                                 </form>
                                             </div>
                                         </td>

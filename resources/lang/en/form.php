@@ -70,7 +70,6 @@ return [
     "register" => "Do you have a registered legal entity in Uzbekistan or do you intend to register a new one?",
     "worker_count" => "Number of employees to be relocated to Uzbekistan",
     "other_information" => "Other information you deem useful",
-    "phone" => "Contact number",
     "email" => "Email address",
     "it_company" => "Application for IT companies",
     "copy_passport" => "Passport copy",

@@ -39,7 +39,8 @@ class SpecialistVisa extends Model
         'visa_date',
         'conditions',
         'status',
-        'reject_reason'
+        'reject_reason',
+        'is_showed'
     ];
 
     public function reletions()
