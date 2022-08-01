@@ -159,10 +159,6 @@
                     <div class="row">
                         <div class="col-md-6 withSmBorder">
                             <div class="p-5">
-                                <div class="shadow-box-ico">
-                                    <img src="{{ asset('img/icons/document-text.svg') }}" alt="">
-                                </div>
-                                <div class="shadow-box-text mb-4">@lang('main.Информация об IT Visa и IT Card')</div>
                                 <a href="{{ asset('files/brouchure.pdf') }}" class="btn btn-success"
                                    target="_blank">@lang('main.Скачать буклет')
                                     <img class="ms-3" src="{{ asset('img/icons/document-download.svg') }}" alt="">
@@ -171,11 +167,6 @@
                         </div>
                         <div class="col-md-6 ">
                             <div class="p-5">
-                                <div class="shadow-box-ico">
-                                    <img src="{{ asset('img/icons/document-text.svg') }}" alt="">
-                                </div>
-                                <div class="shadow-box-text mb-4">@lang('main.Разница между IT-Visa и IT Card')
-                                </div>
                                     <a href="{{ asset('files/presamalya_organized (3)_organized.pdf') }}" class="btn btn-success"
                                        target="_blank">@lang('main.Скачать презентация')
                                         <img class="ms-3" src="{{ asset('img/icons/document-download.svg') }}" alt="">
