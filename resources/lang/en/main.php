@@ -286,7 +286,12 @@ return [
     "Разница между IT-Visa и IT Card" => "Difference between IT Visa and IT Card",
     "Скачать буклет" => "Download booklet",
     "Скачать презентация" => "Download presentation",
-    "Покупка недвижимости любой стоимости на территории РУз" => "Purchase of real estate of any value in the territory of the Republic of Uzbekistan"
+    "Покупка недвижимости любой стоимости на территории РУз" => "Purchase of real estate of any value in the territory of the Republic of Uzbekistan",
+    "Кому выдается IT-Visa?" => "Who is issued an IT-Visa?",
+    "иностранному инвестору" => "a foreign investor (or the head of a company acting as an investor) investing in the field of information technology in the territory of the Republic of Uzbekistan;",
+    "иностранному специалисту" => "a foreign specialist whose annual income in the last 12 months in the field of information technologies is at least the equivalent of 30 thousand US dollars;",
+    "учредителю (участнику)" => "the founder (participant) of a legal entity - a resident of the Technopark.",
+
 
 
 

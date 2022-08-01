@@ -713,6 +713,24 @@
                                 </div>
                             </li>
 
+                            <li data-aos="fade-up" class="hide">
+                                <a data-bs-toggle="collapse" class="collapse collapse-toggle collapsed"
+                                   data-bs-target="#faq-list-20">
+                                    @lang('main.Кому выдается IT-Visa?')
+                                    <span class="collapse-toggle-icon">
+                                        <img src="{{ asset('img/icons/plus.svg') }}" class="icon-show" alt="">
+                                        <img src="{{ asset('img/icons/minus.svg') }}" class="icon-close" alt="">
+                                    </span>
+                                </a>
+                                <div id="faq-list-20" class="collapse collapse-body" data-bs-parent=".faq-list">
+                                    <ul>
+                                        <li>@lang('main.иностранному инвестору')</li>
+                                        <li>@lang('main.иностранному специалисту')</li>
+                                        <li>@lang('main.учредителю (участнику)') </li>
+                                    </ul>
+                                </div>
+                            </li>
+
 
                             <li data-aos="fade-up" class="hide">
                                 <a data-bs-toggle="collapse" class="collapse collapse-toggle collapsed"
