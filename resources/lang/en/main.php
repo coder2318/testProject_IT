@@ -11,7 +11,7 @@ return [
     "въезд и" => "with no hassle",
     "в Узбекистане" => "in Uzbekistan",
     "Равные социальные" => "Equal social",
-    "условия с" => "conditions with citizens of Uzbekistan",
+    "условия с" => "rights with citizens of Uzbekistan",
     "Упрощенный порядок" => "Simplified procedure",
     "получения" => "for obtaining",
     "ВНЖ" => "a Residence Permit",
@@ -284,8 +284,9 @@ return [
     "Поиск работодателя" => "Employer search",
     "Информация об IT Visa и IT Card" => "Information about IT Visa and IT Card",
     "Разница между IT-Visa и IT Card" => "Difference between IT Visa and IT Card",
-    "Скачать буклет" => "Download booklet"
-
+    "Скачать буклет" => "Download booklet",
+    "Скачать презентация" => "Download presentation",
+    "Покупка недвижимости любой стоимости на территории РУз" => "Purchase of real estate of any value in the territory of the Republic of Uzbekistan"
 
 
 

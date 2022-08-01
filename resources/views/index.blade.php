@@ -94,7 +94,7 @@
                                 <img src="{{ asset('img/icons/check.svg') }}" alt="" width="20%">
                             </div>
                             <br>
-                            <div class="shadow-box-text">@lang('Покупка недвижимости любой стоимости на территории РУз')
+                            <div class="shadow-box-text">@lang('main.Покупка недвижимости любой стоимости на территории РУз')
                             </div>
                         </div>
                     </div>
@@ -177,7 +177,7 @@
                                 <div class="shadow-box-text mb-4">@lang('main.Разница между IT-Visa и IT Card')
                                 </div>
                                     <a href="{{ asset('files/presamalya_organized (3)_organized.pdf') }}" class="btn btn-success"
-                                       target="_blank">@lang('main.Скачать буклет')
+                                       target="_blank">@lang('main.Скачать презентация')
                                         <img class="ms-3" src="{{ asset('img/icons/document-download.svg') }}" alt="">
                                     </a>
                             </div>
