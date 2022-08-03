@@ -159,7 +159,7 @@
                     <div class="row">
                         <div class="col-md-6 withSmBorder">
                             <div class="p-5">
-                                <a href="{{ asset('files/brouchure.pdf') }}" class="btn btn-success"
+                                <a href="{{ asset('files/'.__('main.brouchure.pdf')) }}" class="btn btn-success"
                                    target="_blank">@lang('main.Скачать буклет')
                                     <img class="ms-3" src="{{ asset('img/icons/document-download.svg') }}" alt="">
                                 </a>
@@ -167,7 +167,7 @@
                         </div>
                         <div class="col-md-6 ">
                             <div class="p-5">
-                                    <a href="{{ asset('files/presamalya_organized (3)_organized.pdf') }}" class="btn btn-success"
+                                    <a href="{{ asset('files/'.__('main.pres.pdf')) }}" class="btn btn-success"
                                        target="_blank">@lang('main.Скачать презентация')
                                         <img class="ms-3" src="{{ asset('img/icons/document-download.svg') }}" alt="">
                                     </a>
